@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ModeViewController.h"
 
 @implementation AppDelegate
 
@@ -15,8 +16,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    return YES;
+  
+  ModeViewController *modeVC = [[ModeViewController alloc] initWithNibName:@"ModeViewController" bundle:nil];
+  self.window.rootViewController = modeVC;
+  
+  [self.window makeKeyAndVisible];
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

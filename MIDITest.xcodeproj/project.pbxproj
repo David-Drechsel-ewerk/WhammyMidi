@@ -11,6 +11,8 @@
 		14B9EA6616C112E600069E74 /* PGMidiAllSources.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6216C112E600069E74 /* PGMidiAllSources.mm */; };
 		14B9EA6716C112E600069E74 /* PGMidiFind.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6416C112E600069E74 /* PGMidiFind.mm */; };
 		14B9EA6B16C114C900069E74 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B9EA6A16C114C900069E74 /* CoreMIDI.framework */; };
+		14B9EA6F16C115AC00069E74 /* ModeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6D16C115AC00069E74 /* ModeViewController.mm */; };
+		14B9EA7016C115AC00069E74 /* ModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B9EA6E16C115AC00069E74 /* ModeViewController.xib */; };
 		199CAB7A16C0EE0D00575395 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199CAB7916C0EE0D00575395 /* UIKit.framework */; };
 		199CAB7C16C0EE0D00575395 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199CAB7B16C0EE0D00575395 /* Foundation.framework */; };
 		199CAB7E16C0EE0D00575395 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199CAB7D16C0EE0D00575395 /* CoreGraphics.framework */; };
@@ -33,6 +35,10 @@
 		14B9EA6416C112E600069E74 /* PGMidiFind.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PGMidiFind.mm; sourceTree = "<group>"; };
 		14B9EA6916C113FE00069E74 /* CWLSynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWLSynthesizeSingleton.h; path = ../CWLSynthesizeSingleton.h; sourceTree = "<group>"; };
 		14B9EA6A16C114C900069E74 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		14B9EA6C16C115AC00069E74 /* ModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeViewController.h; sourceTree = "<group>"; };
+		14B9EA6D16C115AC00069E74 /* ModeViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ModeViewController.mm; sourceTree = "<group>"; };
+		14B9EA6E16C115AC00069E74 /* ModeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModeViewController.xib; sourceTree = "<group>"; };
+		14B9EA7116C1304800069E74 /* WhammyMidi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WhammyMidi.h; path = ../PGMidi/WhammyMidi.h; sourceTree = "<group>"; };
 		199CAB7616C0EE0D00575395 /* MIDITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIDITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199CAB7916C0EE0D00575395 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		199CAB7B16C0EE0D00575395 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +120,10 @@
 				199CAB8816C0EE0D00575395 /* AppDelegate.h */,
 				199CAB8916C0EE0D00575395 /* AppDelegate.m */,
 				199CAB8016C0EE0D00575395 /* Supporting Files */,
+				14B9EA6C16C115AC00069E74 /* ModeViewController.h */,
+				14B9EA6D16C115AC00069E74 /* ModeViewController.mm */,
+				14B9EA6E16C115AC00069E74 /* ModeViewController.xib */,
+				14B9EA7116C1304800069E74 /* WhammyMidi.h */,
 			);
 			path = MIDITest;
 			sourceTree = "<group>";
@@ -187,6 +197,7 @@
 				199CAB8C16C0EE0D00575395 /* Default.png in Resources */,
 				199CAB8E16C0EE0D00575395 /* Default@2x.png in Resources */,
 				199CAB9016C0EE0D00575395 /* Default-568h@2x.png in Resources */,
+				14B9EA7016C115AC00069E74 /* ModeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +213,7 @@
 				14B9EA6516C112E600069E74 /* PGMidi.mm in Sources */,
 				14B9EA6616C112E600069E74 /* PGMidiAllSources.mm in Sources */,
 				14B9EA6716C112E600069E74 /* PGMidiFind.mm in Sources */,
+				14B9EA6F16C115AC00069E74 /* ModeViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +290,16 @@
 		199CAB9416C0EE0D00575395 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MIDITest/MIDITest-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
 				INFOPLIST_FILE = "MIDITest/MIDITest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -289,8 +309,16 @@
 		199CAB9516C0EE0D00575395 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MIDITest/MIDITest-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
 				INFOPLIST_FILE = "MIDITest/MIDITest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
