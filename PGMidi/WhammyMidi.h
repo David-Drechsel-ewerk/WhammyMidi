@@ -5,21 +5,9 @@
 //  Created by David Drechsel on 05.02.13.
 //  Copyright (c) 2013 David Drechsel. All rights reserved.
 //
-
-#define NoteOn(note, velocity) {0x80, (note), (velocity)}
-#define NoteOff(note) {0x80, (note), 0}
-
-#define WhammyProgram(program) {0xC0, (program), 0} //different programcodes for active or bypassed
-
-#define WhammyOn {0xB0, 0, 0}
-#define WhammyOff {0xB0, 0 127}
-
-#define PedalPosition(position) {0xB0, 2, (position)}
-
 typedef enum {
   
-  WhammyProgramInvalid = 0,
-  WhammyProgramActiveDetuneShallow,
+  WhammyProgramActiveDetuneShallow = 0,
   WhammyProgramActiveDetuneDeep,
   WhammyProgramActive2OctUp,
   WhammyProgramActiveOctUp,
@@ -27,7 +15,7 @@ typedef enum {
   WhammyProgramActive2OctDown,
   WhammyProgramActiveDiveBomb,
   WhammyProgramActiveDroptune,
-  WhammyProgramActiveHarmonyOctDownOctUp,
+  WhammyProgramActiveHarmony2ndUp3rdUp,
   WhammyProgramActiveHarmony5thDown4rdDown,
   WhammyProgramActiveHarmony4thDown3rdDown,
   WhammyProgramActiveHarmony5thUp7thUp,
@@ -35,8 +23,7 @@ typedef enum {
   WhammyProgramActiveHarmony4thUp5thUp,
   WhammyProgramActiveHarmony3rdUp4thUp,
   WhammyProgramActiveHarmonyb3rdUp3rdUp,
-  WhammyProgramActiveHarmony2ndUp3rdUp,
-  
+  WhammyProgramActiveHarmonyOctDownOctUp,
   WhammyProgramBypassedDetuneShallow,
   WhammyProgramBypassedDetuneDeep,
   WhammyProgramBypassed2OctUp,
@@ -45,7 +32,7 @@ typedef enum {
   WhammyProgramBypassed2OctDown,
   WhammyProgramBypassedDiveBomb,
   WhammyProgramBypassedDroptune,
-  WhammyProgramBypassedHarmonyOctDownOctUp,
+  WhammyProgramBypassedHarmony2ndUp3rdUp,
   WhammyProgramBypassedHarmony5thDown4rdDown,
   WhammyProgramBypassedHarmony4thDown3rdDown,
   WhammyProgramBypassedHarmony5thUp7thUp,
@@ -53,12 +40,12 @@ typedef enum {
   WhammyProgramBypassedHarmony4thUp5thUp,
   WhammyProgramBypassedHarmony3rdUp4thUp,
   WhammyProgramBypassedHarmonyb3rdUp3rdUp,
-  WhammyProgramBypassedHarmony2ndUp3rdUp,
+  WhammyProgramBypassedHarmonyOctDownOctUp,
   WhammyProgramCount
   
 } WhammyProgram;
 
-#define CountOfWhammyPrograms WhammyProgramCount-2
+#define CountOfWhammyPrograms WhammyProgramCount
 
 static NSArray *whammyProgramNames = @[@"ActiveDetuneShallow",
                                        @"ActiveDetuneDeep",
@@ -94,4 +81,18 @@ static NSArray *whammyProgramNames = @[@"ActiveDetuneShallow",
                                        @"BypassedHarmony3rdUp4thUp",
                                        @"BypassedHarmonyb3rdUp3rdUp",
                                        @"BypassedHarmony2ndUp3rdUp"];
+
+@interface WhammyMidi : NSObject
+
++(void)logAllInterfaces;
+
++(void)whammyOn;
++(void)whammyOff;
++(void)program:(int)program;
++(void)pedalPosition:(int)position;
+
++(void)sendCommand:(const UInt8*)command;
++(void)sendCommand:(const UInt8*)command withAfterDelay:(float)holdTime;
+
+@end
 

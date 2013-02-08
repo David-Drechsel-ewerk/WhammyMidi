@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ModeViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ModeViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
