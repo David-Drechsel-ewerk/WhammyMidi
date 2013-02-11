@@ -60,6 +60,10 @@
     [WhammyMidi pedalPosition:sender.value];
     
 }
+- (IBAction)pedalTouchUp:(UISlider *)sender {
+    [WhammyMidi pedalPosition:43];
+    sender.value = 43;
+}
 
 - (void)viewDidUnload {
     [self setLabel:nil];
