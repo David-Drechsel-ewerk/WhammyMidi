@@ -16,6 +16,7 @@ NSString *ToString(PGMidiConnection *connection)
 +(void)logAllInterfaces
 {
     PGMidi *midi = [PGMidi sharedPGMidi];
+    midi.networkEnabled = YES;
     NSLog(@"%@", midi);
     NSLog(@"sources:");
     for (PGMidiSource *source in midi.sources)

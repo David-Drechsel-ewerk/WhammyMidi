@@ -14,6 +14,9 @@
 		14B9EA6F16C115AC00069E74 /* ModeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6D16C115AC00069E74 /* ModeViewController.mm */; };
 		14B9EA7016C115AC00069E74 /* ModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B9EA6E16C115AC00069E74 /* ModeViewController.xib */; };
 		19047E8316C4FD0500D5C570 /* WhammyMidi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19047E8216C4FD0500D5C570 /* WhammyMidi.mm */; };
+		197A4F9316D540D90096A787 /* ProgrammCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 197A4F9216D540D90096A787 /* ProgrammCell.m */; };
+		197A4F9516D545220096A787 /* ProgrammCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197A4F9416D545210096A787 /* ProgrammCell.xib */; };
+		197A4F9716D54A010096A787 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197A4F9616D54A010096A787 /* QuartzCore.framework */; };
 		199CAB7A16C0EE0D00575395 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199CAB7916C0EE0D00575395 /* UIKit.framework */; };
 		199CAB7C16C0EE0D00575395 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199CAB7B16C0EE0D00575395 /* Foundation.framework */; };
 		199CAB7E16C0EE0D00575395 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199CAB7D16C0EE0D00575395 /* CoreGraphics.framework */; };
@@ -41,6 +44,10 @@
 		14B9EA6E16C115AC00069E74 /* ModeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModeViewController.xib; sourceTree = "<group>"; };
 		14B9EA7116C1304800069E74 /* WhammyMidi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WhammyMidi.h; path = ../PGMidi/WhammyMidi.h; sourceTree = "<group>"; };
 		19047E8216C4FD0500D5C570 /* WhammyMidi.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WhammyMidi.mm; sourceTree = "<group>"; };
+		197A4F9116D540D90096A787 /* ProgrammCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammCell.h; sourceTree = "<group>"; };
+		197A4F9216D540D90096A787 /* ProgrammCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammCell.m; sourceTree = "<group>"; };
+		197A4F9416D545210096A787 /* ProgrammCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgrammCell.xib; sourceTree = "<group>"; };
+		197A4F9616D54A010096A787 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		199CAB7616C0EE0D00575395 /* MIDITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIDITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199CAB7916C0EE0D00575395 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		199CAB7B16C0EE0D00575395 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				197A4F9716D54A010096A787 /* QuartzCore.framework in Frameworks */,
 				14B9EA6B16C114C900069E74 /* CoreMIDI.framework in Frameworks */,
 				199CAB7A16C0EE0D00575395 /* UIKit.framework in Frameworks */,
 				199CAB7C16C0EE0D00575395 /* Foundation.framework in Frameworks */,
@@ -108,6 +116,7 @@
 		199CAB7816C0EE0D00575395 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				197A4F9616D54A010096A787 /* QuartzCore.framework */,
 				14B9EA6A16C114C900069E74 /* CoreMIDI.framework */,
 				199CAB7916C0EE0D00575395 /* UIKit.framework */,
 				199CAB7B16C0EE0D00575395 /* Foundation.framework */,
@@ -125,6 +134,9 @@
 				14B9EA6C16C115AC00069E74 /* ModeViewController.h */,
 				14B9EA6D16C115AC00069E74 /* ModeViewController.mm */,
 				14B9EA6E16C115AC00069E74 /* ModeViewController.xib */,
+				197A4F9116D540D90096A787 /* ProgrammCell.h */,
+				197A4F9216D540D90096A787 /* ProgrammCell.m */,
+				197A4F9416D545210096A787 /* ProgrammCell.xib */,
 				14B9EA7116C1304800069E74 /* WhammyMidi.h */,
 				19047E8216C4FD0500D5C570 /* WhammyMidi.mm */,
 			);
@@ -201,6 +213,7 @@
 				199CAB8E16C0EE0D00575395 /* Default@2x.png in Resources */,
 				199CAB9016C0EE0D00575395 /* Default-568h@2x.png in Resources */,
 				14B9EA7016C115AC00069E74 /* ModeViewController.xib in Resources */,
+				197A4F9516D545220096A787 /* ProgrammCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +231,7 @@
 				14B9EA6716C112E600069E74 /* PGMidiFind.mm in Sources */,
 				14B9EA6F16C115AC00069E74 /* ModeViewController.mm in Sources */,
 				19047E8316C4FD0500D5C570 /* WhammyMidi.mm in Sources */,
+				197A4F9316D540D90096A787 /* ProgrammCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

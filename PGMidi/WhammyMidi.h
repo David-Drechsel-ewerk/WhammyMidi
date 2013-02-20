@@ -47,40 +47,42 @@ typedef enum {
 
 #define CountOfWhammyPrograms WhammyProgramCount
 
-static NSArray *whammyProgramNames = @[@"ActiveDetuneShallow",
-                                       @"ActiveDetuneDeep",
-                                       @"Active2OctUp",
-                                       @"ActiveOctUp",
-                                       @"ActiveOctDown",
-                                       @"Active2OctDown",
-                                       @"ActiveDiveBomb",
-                                       @"ActiveDroptune",
-                                       @"ActiveHarmonyOctDownOctUp",
-                                       @"ActiveHarmony5thDown4rdDown",
-                                       @"ActiveHarmony4thDown3rdDown",
-                                       @"ActiveHarmony5thUp7thUp",
-                                       @"ActiveHarmony5thUp6thUp",
-                                       @"ActiveHarmony4thUp5thUp",
-                                       @"ActiveHarmony3rdUp4thUp",
-                                       @"ActiveHarmonyb3rdUp3rdUp",
-                                       @"ActiveHarmony2ndUp3rdUp",
-                                       @"BypassedDetuneShallow",
-                                       @"BypassedDetuneDeep",
-                                       @"Bypassed2OctUp",
-                                       @"BypassedOctUp",
-                                       @"BypassedOctDown",
-                                       @"Bypassed2OctDown",
-                                       @"BypassedDiveBomb",
-                                       @"BypassedDroptune",
-                                       @"BypassedHarmonyOctDownOctUp",
-                                       @"BypassedHarmony5thDown4rdDown",
-                                       @"BypassedHarmony4thDown3rdDown",
-                                       @"BypassedHarmony5thUp7thUp",
-                                       @"BypassedHarmony5thUp6thUp",
-                                       @"BypassedHarmony4thUp5thUp",
-                                       @"BypassedHarmony3rdUp4thUp",
-                                       @"BypassedHarmonyb3rdUp3rdUp",
-                                       @"BypassedHarmony2ndUp3rdUp"];
+static NSArray *whammyProgramNames = @[//ActiveModes
+                                       @"Detune Shallow",
+                                       @"Detune Deep",
+                                       @"2 Oct Up",
+                                       @"Oct Up",
+                                       @"Oct Down",
+                                       @"2 Oct Down",
+                                       @"Dive Bomb",
+                                       @"Droptune",
+                                       @"Harmony Oct Down Oct Up",
+                                       @"Harmony 5th Down 4rd Down",
+                                       @"Harmony 4th Down 3rd Down",
+                                       @"Harmony 5th Up 7th Up",
+                                       @"Harmony 5th Up 6th Up",
+                                       @"Harmony 4th Up 5th Up",
+                                       @"Harmony 3rd Up 4th Up",
+                                       @"Harmony b3rd Up 3rd Up",
+                                       @"Harmony 2nd Up 3rd Up",
+                                       //BypassedModes
+                                       @"Detune Shallow",
+                                       @"Detune Deep",
+                                       @"2 Oct Up",
+                                       @"Oct Up",
+                                       @"Oct Down",
+                                       @"2 Oct Down",
+                                       @"Dive Bomb",
+                                       @"Droptune",
+                                       @"Harmony Oct Down Oct Up",
+                                       @"Harmony 5th Down 4rd Down",
+                                       @"Harmony 4th Down 3rd Down",
+                                       @"Harmony 5th Up 7th Up",
+                                       @"Harmony 5th Up 6th Up",
+                                       @"Harmony 4th Up 5th Up",
+                                       @"Harmony 3rd Up 4th Up",
+                                       @"Harmony b3rd Up 3rd Up",
+                                       @"Harmony 2nd Up 3rd Up"];
 
 @interface WhammyMidi : NSObject
 
@@ -91,8 +93,8 @@ static NSArray *whammyProgramNames = @[@"ActiveDetuneShallow",
 +(void)program:(int)program;
 +(void)pedalPosition:(int)position;
 
-+(void)sendCommand:(const UInt8*)command;
-+(void)sendCommand:(const UInt8*)command withAfterDelay:(float)holdTime;
+//+(void)sendCommand:(const UInt8*)command;
+//+(void)sendCommand:(const UInt8*)command withAfterDelay:(float)holdTime;
 
 @end
 

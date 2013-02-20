@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ModeViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *label;
+@interface ModeViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+{
+    IBOutlet UICollectionView *collectionView;
+    IBOutlet UIButton *whammyOnBtn;
+    IBOutlet UIButton *whammyOffBtn;
+}
+
+- (IBAction)pressedWhammyOn:(id)sender;
+- (IBAction)pressedWhammyOff:(id)sender;
+
 
 @end
