@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ModeViewController.h"
+#import "AutoSnapViewController.h"
+#import "WhammyMidi.h"
+#import "HoldPedalViewController.h"
 
 @implementation AppDelegate
 
@@ -16,9 +19,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    [WhammyMidi logAllInterfaces];
   
-  ModeViewController *modeVC = [[ModeViewController alloc] initWithNibName:@"ModeViewController" bundle:nil];
-  self.window.rootViewController = modeVC;
+  HoldPedalViewController *vc = [[HoldPedalViewController alloc] init];
+  self.window.rootViewController = vc;
   
   [self.window makeKeyAndVisible];
   return YES;

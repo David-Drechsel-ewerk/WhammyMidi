@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1437EC9B16D6402E00CFFA17 /* HoldPedalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437EC9916D6402E00CFFA17 /* HoldPedalViewController.m */; };
+		1437EC9C16D6402E00CFFA17 /* HoldPedalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */; };
 		14B9EA6516C112E600069E74 /* PGMidi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6016C112E600069E74 /* PGMidi.mm */; };
 		14B9EA6616C112E600069E74 /* PGMidiAllSources.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6216C112E600069E74 /* PGMidiAllSources.mm */; };
 		14B9EA6716C112E600069E74 /* PGMidiFind.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6416C112E600069E74 /* PGMidiFind.mm */; };
@@ -17,6 +19,11 @@
 		197A4F9316D540D90096A787 /* ProgrammCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 197A4F9216D540D90096A787 /* ProgrammCell.m */; };
 		197A4F9516D545220096A787 /* ProgrammCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197A4F9416D545210096A787 /* ProgrammCell.xib */; };
 		197A4F9716D54A010096A787 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197A4F9616D54A010096A787 /* QuartzCore.framework */; };
+		197A4F9A16D570BB0096A787 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 197A4F9816D570BA0096A787 /* back.png */; };
+		197A4F9B16D570BB0096A787 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 197A4F9916D570BB0096A787 /* back@2x.png */; };
+		197A4F9F16D572670096A787 /* WhammyControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 197A4F9E16D572670096A787 /* WhammyControlViewController.m */; };
+		197A4FA316D5787D0096A787 /* AutoSnapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 197A4FA116D5787D0096A787 /* AutoSnapViewController.m */; };
+		197A4FA416D5787D0096A787 /* AutoSnapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197A4FA216D5787D0096A787 /* AutoSnapViewController.xib */; };
 		199CAB7A16C0EE0D00575395 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199CAB7916C0EE0D00575395 /* UIKit.framework */; };
 		199CAB7C16C0EE0D00575395 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199CAB7B16C0EE0D00575395 /* Foundation.framework */; };
 		199CAB7E16C0EE0D00575395 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199CAB7D16C0EE0D00575395 /* CoreGraphics.framework */; };
@@ -29,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1437EC9816D6402E00CFFA17 /* HoldPedalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldPedalViewController.h; sourceTree = "<group>"; };
+		1437EC9916D6402E00CFFA17 /* HoldPedalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoldPedalViewController.m; sourceTree = "<group>"; };
+		1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HoldPedalViewController.xib; sourceTree = "<group>"; };
 		14B9EA5D16C112E600069E74 /* iOSVersionDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSVersionDetection.h; sourceTree = "<group>"; };
 		14B9EA5E16C112E600069E74 /* PGArc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGArc.h; sourceTree = "<group>"; };
 		14B9EA5F16C112E600069E74 /* PGMidi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMidi.h; sourceTree = "<group>"; };
@@ -48,6 +58,13 @@
 		197A4F9216D540D90096A787 /* ProgrammCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammCell.m; sourceTree = "<group>"; };
 		197A4F9416D545210096A787 /* ProgrammCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgrammCell.xib; sourceTree = "<group>"; };
 		197A4F9616D54A010096A787 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		197A4F9816D570BA0096A787 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		197A4F9916D570BB0096A787 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		197A4F9D16D572670096A787 /* WhammyControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhammyControlViewController.h; sourceTree = "<group>"; };
+		197A4F9E16D572670096A787 /* WhammyControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhammyControlViewController.m; sourceTree = "<group>"; };
+		197A4FA016D5787C0096A787 /* AutoSnapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSnapViewController.h; sourceTree = "<group>"; };
+		197A4FA116D5787D0096A787 /* AutoSnapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSnapViewController.m; sourceTree = "<group>"; };
+		197A4FA216D5787D0096A787 /* AutoSnapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoSnapViewController.xib; sourceTree = "<group>"; };
 		199CAB7616C0EE0D00575395 /* MIDITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIDITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199CAB7916C0EE0D00575395 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		199CAB7B16C0EE0D00575395 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -79,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1437EC9716D63ED700CFFA17 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				197A4F9816D570BA0096A787 /* back.png */,
+				197A4F9916D570BB0096A787 /* back@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		14B9EA5C16C112E600069E74 /* PGMidi */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +119,19 @@
 				14B9EA6416C112E600069E74 /* PGMidiFind.mm */,
 			);
 			path = PGMidi;
+			sourceTree = "<group>";
+		};
+		197A4F9C16D5722B0096A787 /* Programmchange */ = {
+			isa = PBXGroup;
+			children = (
+				14B9EA6C16C115AC00069E74 /* ModeViewController.h */,
+				14B9EA6D16C115AC00069E74 /* ModeViewController.mm */,
+				14B9EA6E16C115AC00069E74 /* ModeViewController.xib */,
+				197A4F9116D540D90096A787 /* ProgrammCell.h */,
+				197A4F9216D540D90096A787 /* ProgrammCell.m */,
+				197A4F9416D545210096A787 /* ProgrammCell.xib */,
+			);
+			name = Programmchange;
 			sourceTree = "<group>";
 		};
 		199CAB6D16C0EE0D00575395 = {
@@ -128,15 +167,19 @@
 		199CAB7F16C0EE0D00575395 /* MIDITest */ = {
 			isa = PBXGroup;
 			children = (
+				1437EC9716D63ED700CFFA17 /* images */,
 				199CAB8816C0EE0D00575395 /* AppDelegate.h */,
 				199CAB8916C0EE0D00575395 /* AppDelegate.m */,
+				197A4F9D16D572670096A787 /* WhammyControlViewController.h */,
+				197A4F9E16D572670096A787 /* WhammyControlViewController.m */,
+				1437EC9816D6402E00CFFA17 /* HoldPedalViewController.h */,
+				1437EC9916D6402E00CFFA17 /* HoldPedalViewController.m */,
+				1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */,
+				197A4FA016D5787C0096A787 /* AutoSnapViewController.h */,
+				197A4FA116D5787D0096A787 /* AutoSnapViewController.m */,
+				197A4FA216D5787D0096A787 /* AutoSnapViewController.xib */,
 				199CAB8016C0EE0D00575395 /* Supporting Files */,
-				14B9EA6C16C115AC00069E74 /* ModeViewController.h */,
-				14B9EA6D16C115AC00069E74 /* ModeViewController.mm */,
-				14B9EA6E16C115AC00069E74 /* ModeViewController.xib */,
-				197A4F9116D540D90096A787 /* ProgrammCell.h */,
-				197A4F9216D540D90096A787 /* ProgrammCell.m */,
-				197A4F9416D545210096A787 /* ProgrammCell.xib */,
+				197A4F9C16D5722B0096A787 /* Programmchange */,
 				14B9EA7116C1304800069E74 /* WhammyMidi.h */,
 				19047E8216C4FD0500D5C570 /* WhammyMidi.mm */,
 			);
@@ -214,6 +257,10 @@
 				199CAB9016C0EE0D00575395 /* Default-568h@2x.png in Resources */,
 				14B9EA7016C115AC00069E74 /* ModeViewController.xib in Resources */,
 				197A4F9516D545220096A787 /* ProgrammCell.xib in Resources */,
+				197A4F9A16D570BB0096A787 /* back.png in Resources */,
+				197A4F9B16D570BB0096A787 /* back@2x.png in Resources */,
+				197A4FA416D5787D0096A787 /* AutoSnapViewController.xib in Resources */,
+				1437EC9C16D6402E00CFFA17 /* HoldPedalViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +279,9 @@
 				14B9EA6F16C115AC00069E74 /* ModeViewController.mm in Sources */,
 				19047E8316C4FD0500D5C570 /* WhammyMidi.mm in Sources */,
 				197A4F9316D540D90096A787 /* ProgrammCell.m in Sources */,
+				197A4F9F16D572670096A787 /* WhammyControlViewController.m in Sources */,
+				197A4FA316D5787D0096A787 /* AutoSnapViewController.m in Sources */,
+				1437EC9B16D6402E00CFFA17 /* HoldPedalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

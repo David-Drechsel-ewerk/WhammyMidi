@@ -7,6 +7,44 @@
 
 const char *ToString(BOOL b) { return b ? "yes":"no"; }
 
+NSArray *whammyProgramNames = @[//ActiveModes
+                       @"Detune Shallow",
+                       @"Detune Deep",
+                       @"2 Oct Up",
+                       @"Oct Up",
+                       @"Oct Down",
+                       @"2 Oct Down",
+                       @"Dive Bomb",
+                       @"Droptune",
+                       @"Harmony Oct Down Oct Up",
+                       @"Harmony 5th Down 4rd Down",
+                       @"Harmony 4th Down 3rd Down",
+                       @"Harmony 5th Up 7th Up",
+                       @"Harmony 5th Up 6th Up",
+                       @"Harmony 4th Up 5th Up",
+                       @"Harmony 3rd Up 4th Up",
+                       @"Harmony b3rd Up 3rd Up",
+                       @"Harmony 2nd Up 3rd Up",
+                       //BypassedModes
+                       @"Detune Shallow",
+                       @"Detune Deep",
+                       @"2 Oct Up",
+                       @"Oct Up",
+                       @"Oct Down",
+                       @"2 Oct Down",
+                       @"Dive Bomb",
+                       @"Droptune",
+                       @"Harmony Oct Down Oct Up",
+                       @"Harmony 5th Down 4rd Down",
+                       @"Harmony 4th Down 3rd Down",
+                       @"Harmony 5th Up 7th Up",
+                       @"Harmony 5th Up 6th Up",
+                       @"Harmony 4th Up 5th Up",
+                       @"Harmony 3rd Up 4th Up",
+                       @"Harmony b3rd Up 3rd Up",
+                       @"Harmony 2nd Up 3rd Up"];
+
+
 NSString *ToString(PGMidiConnection *connection)
 {
     return [NSString stringWithFormat:@"< PGMidiConnection: name=%@ isNetwork=%s >",
@@ -22,7 +60,7 @@ NSString *ToString(PGMidiConnection *connection)
     for (PGMidiSource *source in midi.sources)
     {
         NSLog(@"%@", ToString(source));
-        
+      
     }
     NSLog(@"destinations");
     for (PGMidiDestination *destination in midi.destinations)

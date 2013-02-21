@@ -11,6 +11,8 @@
 #import "ProgrammCell.h"
 #import <QuartzCore/QuartzCore.h>
 
+#import "AutoSnapViewController.h"
+
 @interface ModeViewController ()
 
 @end
@@ -71,5 +73,11 @@
 
 - (IBAction)pressedWhammyOff:(id)sender {
     [WhammyMidi whammyOff];
+}
+
+- (IBAction)back:(id)sender {        
+        AutoSnapViewController *mVC = [[AutoSnapViewController alloc] initWithNibName:@"AutoSnapViewController" bundle:nil];
+        self.view.window.rootViewController = mVC;
+
 }
 @end
