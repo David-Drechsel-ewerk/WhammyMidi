@@ -33,6 +33,8 @@
 		199CAB8C16C0EE0D00575395 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 199CAB8B16C0EE0D00575395 /* Default.png */; };
 		199CAB8E16C0EE0D00575395 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 199CAB8D16C0EE0D00575395 /* Default@2x.png */; };
 		199CAB9016C0EE0D00575395 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 199CAB8F16C0EE0D00575395 /* Default-568h@2x.png */; };
+		19FA37D616D6812900A5ED34 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FA37D416D6812900A5ED34 /* MenuViewController.m */; };
+		19FA37D716D6812900A5ED34 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19FA37D516D6812900A5ED34 /* MenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,9 @@
 		199CAB8B16C0EE0D00575395 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		199CAB8D16C0EE0D00575395 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		199CAB8F16C0EE0D00575395 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		19FA37D316D6812900A5ED34 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		19FA37D416D6812900A5ED34 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		19FA37D516D6812900A5ED34 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,16 +175,12 @@
 				1437EC9716D63ED700CFFA17 /* images */,
 				199CAB8816C0EE0D00575395 /* AppDelegate.h */,
 				199CAB8916C0EE0D00575395 /* AppDelegate.m */,
-				197A4F9D16D572670096A787 /* WhammyControlViewController.h */,
-				197A4F9E16D572670096A787 /* WhammyControlViewController.m */,
-				1437EC9816D6402E00CFFA17 /* HoldPedalViewController.h */,
-				1437EC9916D6402E00CFFA17 /* HoldPedalViewController.m */,
-				1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */,
-				197A4FA016D5787C0096A787 /* AutoSnapViewController.h */,
-				197A4FA116D5787D0096A787 /* AutoSnapViewController.m */,
-				197A4FA216D5787D0096A787 /* AutoSnapViewController.xib */,
-				199CAB8016C0EE0D00575395 /* Supporting Files */,
+				19FA37D316D6812900A5ED34 /* MenuViewController.h */,
+				19FA37D416D6812900A5ED34 /* MenuViewController.m */,
+				19FA37D516D6812900A5ED34 /* MenuViewController.xib */,
 				197A4F9C16D5722B0096A787 /* Programmchange */,
+				19FA37D216D67C4A00A5ED34 /* PedalControl */,
+				199CAB8016C0EE0D00575395 /* Supporting Files */,
 				14B9EA7116C1304800069E74 /* WhammyMidi.h */,
 				19047E8216C4FD0500D5C570 /* WhammyMidi.mm */,
 			);
@@ -198,6 +199,21 @@
 				199CAB8F16C0EE0D00575395 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19FA37D216D67C4A00A5ED34 /* PedalControl */ = {
+			isa = PBXGroup;
+			children = (
+				197A4F9D16D572670096A787 /* WhammyControlViewController.h */,
+				197A4F9E16D572670096A787 /* WhammyControlViewController.m */,
+				1437EC9816D6402E00CFFA17 /* HoldPedalViewController.h */,
+				1437EC9916D6402E00CFFA17 /* HoldPedalViewController.m */,
+				1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */,
+				197A4FA016D5787C0096A787 /* AutoSnapViewController.h */,
+				197A4FA116D5787D0096A787 /* AutoSnapViewController.m */,
+				197A4FA216D5787D0096A787 /* AutoSnapViewController.xib */,
+			);
+			name = PedalControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +277,7 @@
 				197A4F9B16D570BB0096A787 /* back@2x.png in Resources */,
 				197A4FA416D5787D0096A787 /* AutoSnapViewController.xib in Resources */,
 				1437EC9C16D6402E00CFFA17 /* HoldPedalViewController.xib in Resources */,
+				19FA37D716D6812900A5ED34 /* MenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +299,7 @@
 				197A4F9F16D572670096A787 /* WhammyControlViewController.m in Sources */,
 				197A4FA316D5787D0096A787 /* AutoSnapViewController.m in Sources */,
 				1437EC9B16D6402E00CFFA17 /* HoldPedalViewController.m in Sources */,
+				19FA37D616D6812900A5ED34 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

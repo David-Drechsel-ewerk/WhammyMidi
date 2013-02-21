@@ -11,7 +11,7 @@
 #import "ProgrammCell.h"
 #import <QuartzCore/QuartzCore.h>
 
-#import "AutoSnapViewController.h"
+#import "MenuViewController.h"
 
 @interface ModeViewController ()
 
@@ -76,8 +76,8 @@
 }
 
 - (IBAction)back:(id)sender {        
-        AutoSnapViewController *mVC = [[AutoSnapViewController alloc] initWithNibName:@"AutoSnapViewController" bundle:nil];
-        self.view.window.rootViewController = mVC;
+  MenuViewController *mVC = [[MenuViewController alloc] init];
+  self.view.window.rootViewController = mVC;
 
 }
 @end

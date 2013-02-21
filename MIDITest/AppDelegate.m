@@ -7,21 +7,19 @@
 //
 
 #import "AppDelegate.h"
-#import "ModeViewController.h"
-#import "AutoSnapViewController.h"
 #import "WhammyMidi.h"
-#import "HoldPedalViewController.h"
+#import "MenuViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [WhammyMidi logAllInterfaces];
+  [UIApplication sharedApplication].idleTimerDisabled = YES;
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  // Override point for customization after application launch.
+  [WhammyMidi logAllInterfaces];
   
-  HoldPedalViewController *vc = [[HoldPedalViewController alloc] init];
+  MenuViewController *vc = [[MenuViewController alloc] init];
   self.window.rootViewController = vc;
   
   [self.window makeKeyAndVisible];
