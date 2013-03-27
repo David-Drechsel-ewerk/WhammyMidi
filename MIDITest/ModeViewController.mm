@@ -9,7 +9,9 @@
 #import "ModeViewController.h"
 #import "WhammyMidi.h"
 #import "ProgrammCell.h"
+#import "DelayedButtonViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "MTInfoPanel.h"
 
 #import "MenuViewController.h"
 
@@ -31,14 +33,25 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     [collectionView registerClass:[ProgrammCell class] forCellWithReuseIdentifier:@"Cell"];
+  
+  //add Back Button
+  DelayedButtonViewController *backBtn = [[DelayedButtonViewController alloc] initWithNibName:@"DelayedButtonViewController" bundle:nil];
+  [self addChildViewController:backBtn];
+  backBtn.delay = 0.3f;
+  backBtn.image = [UIImage imageNamed:@"back"];
+  backBtn.delegate = self;
+  backBtn.btnFiredSelector = @selector(back:);
+  [self.view addSubview:backBtn.view];
+  backBtn.view.frame = CGRectMake(415, 0, 44, 44);
+  
     CALayer *onLayer = whammyOnBtn.layer;
     onLayer.borderColor = [UIColor redColor].CGColor;
     onLayer.borderWidth = 2;
-    onLayer.cornerRadius = 45;
+    onLayer.cornerRadius = 8;
     CALayer *offLayer = whammyOffBtn.layer;
     offLayer.borderColor = [UIColor redColor].CGColor;
     offLayer.borderWidth = 2;
-    offLayer.cornerRadius = 45;
+    offLayer.cornerRadius = 8;
 }
 
 - (void)viewDidUnload {
@@ -69,10 +82,12 @@
 
 - (IBAction)pressedWhammyOn:(id)sender {
     [WhammyMidi whammyOn];
+    [MTInfoPanel showPanelInView:self.view type:MTInfoPanelTypeWarning title:@"Whammy On" subtitle:nil hideAfter:0.6f];
 }
 
 - (IBAction)pressedWhammyOff:(id)sender {
     [WhammyMidi whammyOff];
+    [MTInfoPanel showPanelInView:self.view type:MTInfoPanelTypeWarning title:@"Whammy Off" subtitle:nil hideAfter:0.6f];
 }
 
 - (IBAction)back:(id)sender {        

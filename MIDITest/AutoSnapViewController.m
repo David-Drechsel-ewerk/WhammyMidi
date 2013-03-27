@@ -14,7 +14,6 @@
 
 @interface AutoSnapViewController ()
 {
-    IBOutlet UIView *xyPad;
     IBOutlet UIView *snapper;
     
     float autoSnapPoint;
@@ -40,12 +39,6 @@
     // Do any additional setup after loading the view from its nib.
     autoSnapPoint = 0.5;
     [self setWhammyOffOnTouchUp:YES];
-    
-    UIPanGestureRecognizer *pedalPanRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self
-                                                                                         action:@selector(panToWhammyPedal:)];
-    pedalPanRecognizer.maximumNumberOfTouches = 1;
-    pedalPanRecognizer.minimumNumberOfTouches = 1;
-    [self.view addGestureRecognizer:pedalPanRecognizer];
 }
 
 -(void)didReceiveMemoryWarning
@@ -73,66 +66,71 @@
 -(void)snapperUIForWhammyOffMode
 {
     CGRect snapperFrame = snapper.frame;
-    snapperFrame.origin.x = 0.0f;
+    snapperFrame.origin.x = -10.0f;
     snapperFrame.size.width = 1.0f;
-    
     snapper.frame = snapperFrame;
 }
 
 #pragma settings
 -(void)setWhammyOffOnTouchUp:(BOOL)off
 {
-    whammyOffOnTouchUp = off;
-    //hide the snapperView, because its not needed if whammy turns off
-    if (whammyOffOnTouchUp)
-    {
-        [self snapperUIForWhammyOffMode];
-    }
+  whammyOffOnTouchUp = off;
+  //hide the snapperView, because its not needed if whammy turns off
+  if (whammyOffOnTouchUp)
+  {
+    [self snapperUIForWhammyOffMode];
+  }
+  else
+  {
+    touchTimerDelay = kTouchTimerDelay;
+  }
 }
 
-#pragma gestures
--(void)panToWhammyPedal:(UIPanGestureRecognizer*)pan
+#pragma singleTouch
+-(void)singleFingerTouch:(UITouch*)touch
 {
-    if (pan.state == UIGestureRecognizerStateBegan)
-    {
-        [WhammyMidi whammyOn];
-    }
-    else if (pan.state == UIGestureRecognizerStateChanged)
-    {
-        CGPoint location = [pan locationInView:xyPad];
-        //normalize to xyPad
-        if (location.x < 0)
-        {
-            location.x = 0.0;
-        }
-        else if (location.x > xyPad.frame.size.width)
-        {
-            location.x = xyPad.frame.size.width;
-        }
-        //normalize to MIDI (0 - 127)
-        float locationToPedal = location.x/xyPad.frame.size.width*127;
-        
-        [WhammyMidi pedalPosition:locationToPedal];
-        [self updateUIForTouchPosition:location.x];
-    }
-    else if (pan.state == UIGestureRecognizerStateEnded)
-    {
-        if (whammyOffOnTouchUp)
-        {
-            [WhammyMidi whammyOff];
-            [self snapperUIForWhammyOffMode];
-        }
-        else
-        {
-            [WhammyMidi pedalPosition:127.0f*autoSnapPoint];
-            [self updateUIForTouchPosition:xyPad.frame.size.width*autoSnapPoint];
-        }
-    }
+  [super singleFingerTouch:touch];
+  [WhammyMidi whammyOn];
+  [self touchPositionToPedal:touch];
 }
 
-- (IBAction)back:(id)sender {
-    
-  MenuViewController *mVC = [[MenuViewController alloc] init];
-  self.view.window.rootViewController = mVC;
+-(void)singleFingerMoved:(UITouch*)touch
+{
+  [super singleFingerMoved:touch];
+  [self touchPositionToPedal:touch];
+}
+
+-(void)touchPositionToPedal:(UITouch*)touch
+{
+  CGPoint location = [touch locationInView:xyPad];
+  //normalize to xyPad
+  if (location.x < 0)
+  {
+    location.x = 0.0;
+  }
+  else if (location.x > xyPad.frame.size.width)
+  {
+    location.x = xyPad.frame.size.width;
+  }
+  //normalize to MIDI (0 - 127)
+  float locationToPedal = location.x/xyPad.frame.size.width*127;
+  
+  [WhammyMidi pedalPosition:locationToPedal];
+  [self updateUIForTouchPosition:location.x];
+}
+
+-(void)finishedHandleSingleTouch
+{
+  [super finishedHandleSingleTouch];
+  if (whammyOffOnTouchUp)
+  {
+    [WhammyMidi whammyOff];
+    [self snapperUIForWhammyOffMode];
+  }
+  else
+  {
+    [WhammyMidi pedalPosition:127.0f*autoSnapPoint];
+    [self updateUIForTouchPosition:xyPad.frame.size.width*autoSnapPoint];
+  }
 }
 @end

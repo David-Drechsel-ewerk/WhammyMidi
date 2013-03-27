@@ -15,6 +15,10 @@
 		14B9EA6B16C114C900069E74 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B9EA6A16C114C900069E74 /* CoreMIDI.framework */; };
 		14B9EA6F16C115AC00069E74 /* ModeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6D16C115AC00069E74 /* ModeViewController.mm */; };
 		14B9EA7016C115AC00069E74 /* ModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B9EA6E16C115AC00069E74 /* ModeViewController.xib */; };
+		14F6BD081703039A0041CB34 /* DelayedButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD061703039A0041CB34 /* DelayedButtonViewController.m */; };
+		14F6BD091703039A0041CB34 /* DelayedButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F6BD071703039A0041CB34 /* DelayedButtonViewController.xib */; };
+		14F6BD0B17032C7E0041CB34 /* MTInfoPanel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 14F6BD0A17032C7E0041CB34 /* MTInfoPanel.bundle */; };
+		14F6BD0E17032C870041CB34 /* MTInfoPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD0D17032C870041CB34 /* MTInfoPanel.m */; };
 		19047E8316C4FD0500D5C570 /* WhammyMidi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19047E8216C4FD0500D5C570 /* WhammyMidi.mm */; };
 		197A4F9316D540D90096A787 /* ProgrammCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 197A4F9216D540D90096A787 /* ProgrammCell.m */; };
 		197A4F9516D545220096A787 /* ProgrammCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197A4F9416D545210096A787 /* ProgrammCell.xib */; };
@@ -55,6 +59,12 @@
 		14B9EA6D16C115AC00069E74 /* ModeViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ModeViewController.mm; sourceTree = "<group>"; };
 		14B9EA6E16C115AC00069E74 /* ModeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModeViewController.xib; sourceTree = "<group>"; };
 		14B9EA7116C1304800069E74 /* WhammyMidi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WhammyMidi.h; path = ../PGMidi/WhammyMidi.h; sourceTree = "<group>"; };
+		14F6BD051703039A0041CB34 /* DelayedButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelayedButtonViewController.h; sourceTree = "<group>"; };
+		14F6BD061703039A0041CB34 /* DelayedButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelayedButtonViewController.m; sourceTree = "<group>"; };
+		14F6BD071703039A0041CB34 /* DelayedButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DelayedButtonViewController.xib; sourceTree = "<group>"; };
+		14F6BD0A17032C7E0041CB34 /* MTInfoPanel.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MTInfoPanel.bundle; sourceTree = "<group>"; };
+		14F6BD0C17032C870041CB34 /* MTInfoPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTInfoPanel.h; sourceTree = "<group>"; };
+		14F6BD0D17032C870041CB34 /* MTInfoPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTInfoPanel.m; sourceTree = "<group>"; };
 		19047E8216C4FD0500D5C570 /* WhammyMidi.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WhammyMidi.mm; sourceTree = "<group>"; };
 		197A4F9116D540D90096A787 /* ProgrammCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammCell.h; sourceTree = "<group>"; };
 		197A4F9216D540D90096A787 /* ProgrammCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammCell.m; sourceTree = "<group>"; };
@@ -126,6 +136,26 @@
 			path = PGMidi;
 			sourceTree = "<group>";
 		};
+		14F6BD0F17032EE50041CB34 /* MTInfoPanel */ = {
+			isa = PBXGroup;
+			children = (
+				14F6BD0A17032C7E0041CB34 /* MTInfoPanel.bundle */,
+				14F6BD0C17032C870041CB34 /* MTInfoPanel.h */,
+				14F6BD0D17032C870041CB34 /* MTInfoPanel.m */,
+			);
+			name = MTInfoPanel;
+			path = MIDITest;
+			sourceTree = "<group>";
+		};
+		14F6BD1017032EF30041CB34 /* 3rd Party */ = {
+			isa = PBXGroup;
+			children = (
+				14F6BD0F17032EE50041CB34 /* MTInfoPanel */,
+				14B9EA5C16C112E600069E74 /* PGMidi */,
+			);
+			name = "3rd Party";
+			sourceTree = "<group>";
+		};
 		197A4F9C16D5722B0096A787 /* Programmchange */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +172,7 @@
 		199CAB6D16C0EE0D00575395 = {
 			isa = PBXGroup;
 			children = (
-				14B9EA5C16C112E600069E74 /* PGMidi */,
+				14F6BD1017032EF30041CB34 /* 3rd Party */,
 				199CAB7F16C0EE0D00575395 /* MIDITest */,
 				199CAB7816C0EE0D00575395 /* Frameworks */,
 				199CAB7716C0EE0D00575395 /* Products */,
@@ -175,6 +205,9 @@
 				1437EC9716D63ED700CFFA17 /* images */,
 				199CAB8816C0EE0D00575395 /* AppDelegate.h */,
 				199CAB8916C0EE0D00575395 /* AppDelegate.m */,
+				14F6BD051703039A0041CB34 /* DelayedButtonViewController.h */,
+				14F6BD061703039A0041CB34 /* DelayedButtonViewController.m */,
+				14F6BD071703039A0041CB34 /* DelayedButtonViewController.xib */,
 				19FA37D316D6812900A5ED34 /* MenuViewController.h */,
 				19FA37D416D6812900A5ED34 /* MenuViewController.m */,
 				19FA37D516D6812900A5ED34 /* MenuViewController.xib */,
@@ -278,6 +311,8 @@
 				197A4FA416D5787D0096A787 /* AutoSnapViewController.xib in Resources */,
 				1437EC9C16D6402E00CFFA17 /* HoldPedalViewController.xib in Resources */,
 				19FA37D716D6812900A5ED34 /* MenuViewController.xib in Resources */,
+				14F6BD091703039A0041CB34 /* DelayedButtonViewController.xib in Resources */,
+				14F6BD0B17032C7E0041CB34 /* MTInfoPanel.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +335,8 @@
 				197A4FA316D5787D0096A787 /* AutoSnapViewController.m in Sources */,
 				1437EC9B16D6402E00CFFA17 /* HoldPedalViewController.m in Sources */,
 				19FA37D616D6812900A5ED34 /* MenuViewController.m in Sources */,
+				14F6BD081703039A0041CB34 /* DelayedButtonViewController.m in Sources */,
+				14F6BD0E17032C870041CB34 /* MTInfoPanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
