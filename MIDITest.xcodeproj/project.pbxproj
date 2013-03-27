@@ -19,6 +19,11 @@
 		14F6BD091703039A0041CB34 /* DelayedButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F6BD071703039A0041CB34 /* DelayedButtonViewController.xib */; };
 		14F6BD0B17032C7E0041CB34 /* MTInfoPanel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 14F6BD0A17032C7E0041CB34 /* MTInfoPanel.bundle */; };
 		14F6BD0E17032C870041CB34 /* MTInfoPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD0D17032C870041CB34 /* MTInfoPanel.m */; };
+		14F6BD151703339F0041CB34 /* MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD121703339F0041CB34 /* MFSideMenu.m */; };
+		14F6BD161703339F0041CB34 /* UINavigationController+MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD141703339F0041CB34 /* UINavigationController+MFSideMenu.m */; };
+		14F6BD1A170333F20041CB34 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD19170333F20041CB34 /* SideMenuViewController.m */; };
+		14F6BD1D17033FCD0041CB34 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F6BD1B17033FCD0041CB34 /* menu-icon.png */; };
+		14F6BD1E17033FCD0041CB34 /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F6BD1C17033FCD0041CB34 /* menu-icon@2x.png */; };
 		19047E8316C4FD0500D5C570 /* WhammyMidi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19047E8216C4FD0500D5C570 /* WhammyMidi.mm */; };
 		197A4F9316D540D90096A787 /* ProgrammCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 197A4F9216D540D90096A787 /* ProgrammCell.m */; };
 		197A4F9516D545220096A787 /* ProgrammCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197A4F9416D545210096A787 /* ProgrammCell.xib */; };
@@ -65,6 +70,14 @@
 		14F6BD0A17032C7E0041CB34 /* MTInfoPanel.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MTInfoPanel.bundle; sourceTree = "<group>"; };
 		14F6BD0C17032C870041CB34 /* MTInfoPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTInfoPanel.h; sourceTree = "<group>"; };
 		14F6BD0D17032C870041CB34 /* MTInfoPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTInfoPanel.m; sourceTree = "<group>"; };
+		14F6BD111703339F0041CB34 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
+		14F6BD121703339F0041CB34 /* MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenu.m; sourceTree = "<group>"; };
+		14F6BD131703339F0041CB34 /* UINavigationController+MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MFSideMenu.h"; sourceTree = "<group>"; };
+		14F6BD141703339F0041CB34 /* UINavigationController+MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MFSideMenu.m"; sourceTree = "<group>"; };
+		14F6BD18170333F20041CB34 /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
+		14F6BD19170333F20041CB34 /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
+		14F6BD1B17033FCD0041CB34 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
+		14F6BD1C17033FCD0041CB34 /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
 		19047E8216C4FD0500D5C570 /* WhammyMidi.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WhammyMidi.mm; sourceTree = "<group>"; };
 		197A4F9116D540D90096A787 /* ProgrammCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgrammCell.h; sourceTree = "<group>"; };
 		197A4F9216D540D90096A787 /* ProgrammCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammCell.m; sourceTree = "<group>"; };
@@ -150,10 +163,24 @@
 		14F6BD1017032EF30041CB34 /* 3rd Party */ = {
 			isa = PBXGroup;
 			children = (
+				14F6BD17170333A40041CB34 /* MFSideView */,
 				14F6BD0F17032EE50041CB34 /* MTInfoPanel */,
 				14B9EA5C16C112E600069E74 /* PGMidi */,
 			);
 			name = "3rd Party";
+			sourceTree = "<group>";
+		};
+		14F6BD17170333A40041CB34 /* MFSideView */ = {
+			isa = PBXGroup;
+			children = (
+				14F6BD1B17033FCD0041CB34 /* menu-icon.png */,
+				14F6BD1C17033FCD0041CB34 /* menu-icon@2x.png */,
+				14F6BD111703339F0041CB34 /* MFSideMenu.h */,
+				14F6BD121703339F0041CB34 /* MFSideMenu.m */,
+				14F6BD131703339F0041CB34 /* UINavigationController+MFSideMenu.h */,
+				14F6BD141703339F0041CB34 /* UINavigationController+MFSideMenu.m */,
+			);
+			name = MFSideView;
 			sourceTree = "<group>";
 		};
 		197A4F9C16D5722B0096A787 /* Programmchange */ = {
@@ -208,6 +235,8 @@
 				14F6BD051703039A0041CB34 /* DelayedButtonViewController.h */,
 				14F6BD061703039A0041CB34 /* DelayedButtonViewController.m */,
 				14F6BD071703039A0041CB34 /* DelayedButtonViewController.xib */,
+				14F6BD18170333F20041CB34 /* SideMenuViewController.h */,
+				14F6BD19170333F20041CB34 /* SideMenuViewController.m */,
 				19FA37D316D6812900A5ED34 /* MenuViewController.h */,
 				19FA37D416D6812900A5ED34 /* MenuViewController.m */,
 				19FA37D516D6812900A5ED34 /* MenuViewController.xib */,
@@ -313,6 +342,8 @@
 				19FA37D716D6812900A5ED34 /* MenuViewController.xib in Resources */,
 				14F6BD091703039A0041CB34 /* DelayedButtonViewController.xib in Resources */,
 				14F6BD0B17032C7E0041CB34 /* MTInfoPanel.bundle in Resources */,
+				14F6BD1D17033FCD0041CB34 /* menu-icon.png in Resources */,
+				14F6BD1E17033FCD0041CB34 /* menu-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +368,9 @@
 				19FA37D616D6812900A5ED34 /* MenuViewController.m in Sources */,
 				14F6BD081703039A0041CB34 /* DelayedButtonViewController.m in Sources */,
 				14F6BD0E17032C870041CB34 /* MTInfoPanel.m in Sources */,
+				14F6BD151703339F0041CB34 /* MFSideMenu.m in Sources */,
+				14F6BD161703339F0041CB34 /* UINavigationController+MFSideMenu.m in Sources */,
+				14F6BD1A170333F20041CB34 /* SideMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

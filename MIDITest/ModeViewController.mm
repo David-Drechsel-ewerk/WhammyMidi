@@ -12,6 +12,7 @@
 #import "DelayedButtonViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MTInfoPanel.h"
+#import "MFSideMenu.h"
 
 #import "MenuViewController.h"
 
@@ -38,7 +39,7 @@
   DelayedButtonViewController *backBtn = [[DelayedButtonViewController alloc] initWithNibName:@"DelayedButtonViewController" bundle:nil];
   [self addChildViewController:backBtn];
   backBtn.delay = 0.3f;
-  backBtn.image = [UIImage imageNamed:@"back"];
+  backBtn.image = [UIImage imageNamed:@"menu-icon"];
   backBtn.delegate = self;
   backBtn.btnFiredSelector = @selector(back:);
   [self.view addSubview:backBtn.view];
@@ -56,6 +57,10 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
+}
+
+- (void) dealloc {
+  self.navigationController.sideMenu.menuStateEventBlock = nil;
 }
 
 #pragma mark - UICollectionView Datasource
@@ -91,8 +96,6 @@
 }
 
 - (IBAction)back:(id)sender {        
-  MenuViewController *mVC = [[MenuViewController alloc] init];
-  self.view.window.rootViewController = mVC;
-
+  [self.navigationController.sideMenu toggleRightSideMenu];
 }
 @end

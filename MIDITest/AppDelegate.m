@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "WhammyMidi.h"
-#import "MenuViewController.h"
+#import "SideMenuViewController.h"
+#import "ModeViewController.h"
 
 @implementation AppDelegate
 
@@ -19,8 +20,20 @@
   // Override point for customization after application launch.
   [WhammyMidi logAllInterfaces];
   
-  MenuViewController *vc = [[MenuViewController alloc] init];
-  self.window.rootViewController = vc;
+  SideMenuViewController *rightSideMenuController = [[SideMenuViewController alloc] init];
+  
+  ModeViewController *modeVC = [[ModeViewController alloc] initWithNibName:@"ModeViewController" bundle:nil];
+  
+  UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:modeVC];
+  navCon.navigationBarHidden = YES;
+  
+  
+  MFSideMenu *sideMenu = [MFSideMenu menuWithNavigationController:navCon leftSideMenuController:nil rightSideMenuController:rightSideMenuController panMode:MFSideMenuPanModeSideMenu];
+  sideMenu.menuWidth = 120;
+  
+  rightSideMenuController.sideMenu = sideMenu;
+  
+  self.window.rootViewController = sideMenu.navigationController;
   
   [self.window makeKeyAndVisible];
   return YES;

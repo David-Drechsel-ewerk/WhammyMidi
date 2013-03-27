@@ -15,6 +15,7 @@
 #import "MenuViewController.h"
 #import "DelayedButtonViewController.h"
 #import "MTInfoPanel.h"
+#import "MFSideMenu.h"
 
 @interface WhammyControlViewController ()
 {
@@ -71,7 +72,7 @@
   
   DelayedButtonViewController *backBtn = [[DelayedButtonViewController alloc] initWithNibName:@"DelayedButtonViewController" bundle:nil];
   [self addChildViewController:backBtn];
-  backBtn.image = [UIImage imageNamed:@"back"];
+  backBtn.image = [UIImage imageNamed:@"menu-icon"];
   backBtn.delegate = self;
   backBtn.btnFiredSelector = @selector(back:);
   [self.view addSubview:backBtn.view];
@@ -190,8 +191,7 @@
 }
 
 - (IBAction)back:(id)sender {
-  MenuViewController *mVC = [[MenuViewController alloc] init];
-  self.view.window.rootViewController = mVC;
+  [self.navigationController.sideMenu toggleRightSideMenu];
 }
 
 #pragma mark methods to overwrite
