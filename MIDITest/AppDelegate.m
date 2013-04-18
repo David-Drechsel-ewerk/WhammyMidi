@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "WhammyMidi.h"
 #import "AppProgrammMenuViewController.h"
-#import "ModeViewController.h"
+#import "AutoSnapViewController.h"
 #import "FavModeCollectionViewController.h"
 
 @implementation AppDelegate
@@ -21,20 +21,14 @@
   // Override point for customization after application launch.
   [WhammyMidi logAllInterfaces];
   
-  ModeViewController *modeVC = [[ModeViewController alloc] initWithNibName:@"ModeViewController" bundle:nil];
+  AutoSnapViewController *autoSnap = [[AutoSnapViewController alloc] initWithNibName:@"AutoSnapViewController" bundle:nil];
 
-  UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:modeVC];
+  UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:autoSnap];
   navCon.navigationBarHidden = YES;
   
   AppProgrammMenuViewController *rightSideMenuController = [[AppProgrammMenuViewController alloc] init];
   
-  UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-  [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-  [flowLayout setItemSize:CGSizeMake(100, 100)];
-  [flowLayout setMinimumInteritemSpacing:0.0f];
-  [flowLayout setMinimumLineSpacing:10.0f];
-  
-  FavModeCollectionViewController *leftSideMenuController = [[FavModeCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+  FavModeCollectionViewController *leftSideMenuController = [[FavModeCollectionViewController alloc] initWithCollectionViewLayout:[FavModeCollectionViewController predefinedLayout]];
   
   MFSideMenu *sideMenu = [MFSideMenu menuWithNavigationController:navCon
                                            leftSideMenuController:leftSideMenuController

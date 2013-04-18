@@ -46,11 +46,11 @@
   [self.view addSubview:backBtn.view];
   backBtn.view.frame = CGRectMake(self.view.frame.size.width-67, 10, 44, 44);
   
-  CALayer *collLayer = collectionView.layer;
-  collLayer.shadowColor = [UIColor blackColor].CGColor;
-  collLayer.shadowOffset = CGSizeZero;
-  collLayer.shadowRadius = 3.0f;
-  collLayer.shadowOpacity = 0.8f;
+//  CALayer *collLayer = collectionView.layer;
+//  collLayer.shadowColor = [UIColor blackColor].CGColor;
+//  collLayer.shadowOffset = CGSizeZero;
+//  collLayer.shadowRadius = 3.0f;
+//  collLayer.shadowOpacity = 0.8f;
   
   whammyOnBtn.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.8];
   whammyOffBtn.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.8];

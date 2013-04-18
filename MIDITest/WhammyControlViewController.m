@@ -66,7 +66,7 @@
   //add Back Button
   DelayedButtonViewController *whammyOffbtn = [[DelayedButtonViewController alloc] initWithNibName:@"DelayedButtonViewController" bundle:nil];
   [self addChildViewController:whammyOffbtn];
-  whammyOffbtn.delay = 0.5;
+  whammyOffbtn.delay = 0.3;
   whammyOffbtn.image = nil;
   whammyOffbtn.text = @"Off";
   whammyOffbtn.delegate = self;

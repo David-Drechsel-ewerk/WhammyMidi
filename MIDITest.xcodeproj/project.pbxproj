@@ -192,6 +192,8 @@
 		197A4F9C16D5722B0096A787 /* Programmchange */ = {
 			isa = PBXGroup;
 			children = (
+				14CCEDB41720137900E4C0C7 /* FavModeCollectionViewController.h */,
+				14CCEDB51720137900E4C0C7 /* FavModeCollectionViewController.m */,
 				14B9EA6C16C115AC00069E74 /* ModeViewController.h */,
 				14B9EA6D16C115AC00069E74 /* ModeViewController.mm */,
 				14B9EA6E16C115AC00069E74 /* ModeViewController.xib */,
@@ -243,8 +245,6 @@
 				14F6BD071703039A0041CB34 /* DelayedButtonViewController.xib */,
 				14F6BD18170333F20041CB34 /* AppProgrammMenuViewController.h */,
 				14F6BD19170333F20041CB34 /* AppProgrammMenuViewController.m */,
-				14CCEDB41720137900E4C0C7 /* FavModeCollectionViewController.h */,
-				14CCEDB51720137900E4C0C7 /* FavModeCollectionViewController.m */,
 				19FA37D316D6812900A5ED34 /* MenuViewController.h */,
 				19FA37D416D6812900A5ED34 /* MenuViewController.m */,
 				19FA37D516D6812900A5ED34 /* MenuViewController.xib */,

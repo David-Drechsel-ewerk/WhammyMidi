@@ -15,14 +15,24 @@
   NSArray *favs;
 }
 
++(UICollectionViewLayout*)predefinedLayout
+{
+  UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+  [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+  [flowLayout setItemSize:CGSizeMake(100, 90)];
+  [flowLayout setMinimumInteritemSpacing:0.0f];
+  [flowLayout setMinimumLineSpacing:10.0f];
+  [flowLayout setSectionInset:UIEdgeInsetsMake(5, 10, 0, 10)];
+  return flowLayout;
+}
+
 -(void)viewDidLoad
 {
   [super viewDidLoad];
-  self.view.backgroundColor = [UIColor colorWithWhite:0.2 alpha:1.0];
+  self.collectionView.backgroundColor = [UIColor colorWithWhite:0.2 alpha:1.0];
   
   favs = [NSArray arrayWithObjects:[NSNumber numberWithInt:WhammyProgramBypassedHarmonyOctDownOctUp],
                                    [NSNumber numberWithInt:WhammyProgramBypassedOctUp],
-                                   [NSNumber numberWithInt:WhammyProgramBypassedDiveBomb],
                                    [NSNumber numberWithInt:WhammyProgramBypassedDiveBomb],
           nil];
   

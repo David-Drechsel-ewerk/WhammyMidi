@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FavModeCollectionViewController : UICollectionViewController
-
++(UICollectionViewLayout*)predefinedLayout;
 @end
