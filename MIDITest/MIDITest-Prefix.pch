@@ -13,3 +13,5 @@
     #import <Foundation/Foundation.h>
 #endif
 
+#define kBaseColor [UIColor colorWithRed:0.635 green:0 blue:0.035 alpha:1]
+#define kHighlightColor [UIColor colorWithRed:0.635 green:0 blue:0.035 alpha:0.35]

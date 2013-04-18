@@ -13,7 +13,6 @@
 
 #import "WhammyControlViewController.h"
 #import "MenuViewController.h"
-#import "DelayedButtonViewController.h"
 #import "MTInfoPanel.h"
 #import "MFSideMenu.h"
 
@@ -38,26 +37,31 @@
     return self;
 }
 
+-(void)setupGestures
+{
+  //    UITapGestureRecognizer *f2WhammyOff = [[UITapGestureRecognizer alloc] initWithTarget:self
+  //                                                                                  action:@selector(whammyOff:)];
+  //    f2WhammyOff.numberOfTouchesRequired = 2;
+  //    f2WhammyOff.numberOfTapsRequired = 1;
+  //    f2WhammyOff.delegate = self;
+  //    f2WhammyOff.delaysTouchesBegan = YES;
+  //    [self.view addGestureRecognizer:f2WhammyOff];
+  //
+  //    UITapGestureRecognizer *f3WhammyOn = [[UITapGestureRecognizer alloc] initWithTarget:self
+  //                                                                                  action:@selector(whammyOn:)];
+  //    f3WhammyOn.numberOfTouchesRequired = 3;
+  //    f3WhammyOn.numberOfTapsRequired = 1;
+  //    f3WhammyOn.delegate = self;
+  //    f3WhammyOn.delaysTouchesBegan = YES;
+  //    [self.view addGestureRecognizer:f3WhammyOn];
+}
+
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    touchesInView = [NSMutableArray array];
-//    UITapGestureRecognizer *f2WhammyOff = [[UITapGestureRecognizer alloc] initWithTarget:self
-//                                                                                  action:@selector(whammyOff:)];
-//    f2WhammyOff.numberOfTouchesRequired = 2;
-//    f2WhammyOff.numberOfTapsRequired = 1;
-//    f2WhammyOff.delegate = self;
-//    f2WhammyOff.delaysTouchesBegan = YES;
-//    [self.view addGestureRecognizer:f2WhammyOff];
-//    
-//    UITapGestureRecognizer *f3WhammyOn = [[UITapGestureRecognizer alloc] initWithTarget:self
-//                                                                                  action:@selector(whammyOn:)];
-//    f3WhammyOn.numberOfTouchesRequired = 3;
-//    f3WhammyOn.numberOfTapsRequired = 1;
-//    f3WhammyOn.delegate = self;
-//    f3WhammyOn.delaysTouchesBegan = YES;
-//    [self.view addGestureRecognizer:f3WhammyOn];
+  touchesInView = [NSMutableArray array];
+  [self setupGestures];
   
   //add Back Button
   DelayedButtonViewController *whammyOffbtn = [[DelayedButtonViewController alloc] initWithNibName:@"DelayedButtonViewController" bundle:nil];
@@ -68,7 +72,7 @@
   whammyOffbtn.delegate = self;
   whammyOffbtn.btnFiredSelector = @selector(whammyOff:);
   [self.view addSubview:whammyOffbtn.view];
-  whammyOffbtn.view.frame = CGRectMake(433, 256, 44, 44);
+  whammyOffbtn.view.frame = CGRectMake(self.view.frame.size.width-47, 246, 44, 44);
   
   DelayedButtonViewController *backBtn = [[DelayedButtonViewController alloc] initWithNibName:@"DelayedButtonViewController" bundle:nil];
   [self addChildViewController:backBtn];
@@ -76,13 +80,30 @@
   backBtn.delegate = self;
   backBtn.btnFiredSelector = @selector(back:);
   [self.view addSubview:backBtn.view];
-  backBtn.view.frame = CGRectMake(433, 0, 44, 44);
+  backBtn.view.frame = CGRectMake(self.view.frame.size.width-47, 10, 44, 44);
   
+  DelayedButtonViewController *quickModeBtn = [[DelayedButtonViewController alloc] initWithNibName:@"DelayedButtonViewController" bundle:nil];
+  [self addChildViewController:quickModeBtn];
+  quickModeBtn.image = [UIImage imageNamed:@"menu-icon"];
+  quickModeBtn.delegate = self;
+  quickModeBtn.btnFiredSelector = @selector(quickModeBtnPressed:);
+  [self.view addSubview:quickModeBtn.view];
+  quickModeBtn.view.frame = CGRectMake(3, 10, 44, 44);
+
+  xyPad.backgroundColor = [UIColor colorWithWhite:0.1f alpha:0.3f];
   CALayer *layer = xyPad.layer;
   layer.cornerRadius = 8;
-  layer.borderColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:0.3].CGColor;
+  layer.borderColor = kBaseColor.CGColor;
   layer.borderWidth = 2;
+  //layer.shouldRasterize = YES;
   layer.masksToBounds = YES;
+  
+  CALayer *superlayer = xyPad.superview.layer;
+  superlayer.shouldRasterize = YES;
+  superlayer.shadowColor = [UIColor blackColor].CGColor;
+  superlayer.shadowOffset = CGSizeZero;
+  superlayer.shadowRadius = 3.0f;
+  superlayer.shadowOpacity = 0.8f;
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,7 +153,7 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-  [touchesInView removeObjectsInArray:[touches allObjects]];
+  [touchesInView removeAllObjects];
   [delayTimer invalidate];
   delayTimer = nil;
   [self finishHandledTouch];
@@ -192,6 +213,10 @@
 
 - (IBAction)back:(id)sender {
   [self.navigationController.sideMenu toggleRightSideMenu];
+}
+
+- (IBAction)quickModeBtnPressed:(id)sender {
+  [self.navigationController.sideMenu toggleLeftSideMenu];
 }
 
 #pragma mark methods to overwrite

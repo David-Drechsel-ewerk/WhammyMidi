@@ -13,6 +13,8 @@
 #import <UIKit/UIKit.h>
 #import "WhammyMidi.h"
 
+#import "DelayedButtonViewController.h"
+
 #import <QuartzCore/QuartzCore.h>
 
 #define kTouchTimerDelay 0.0f

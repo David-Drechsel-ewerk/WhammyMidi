@@ -31,10 +31,11 @@
     return self;
 }
 
--(void)viewDidLoad {
-    [super viewDidLoad];
-    [collectionView registerClass:[ProgrammCell class] forCellWithReuseIdentifier:@"Cell"];
-  
+-(void)viewDidLoad
+{
+  [super viewDidLoad];
+  [collectionView registerClass:[ProgrammCell class] forCellWithReuseIdentifier:@"Cell"];
+
   //add Back Button
   DelayedButtonViewController *backBtn = [[DelayedButtonViewController alloc] initWithNibName:@"DelayedButtonViewController" bundle:nil];
   [self addChildViewController:backBtn];
@@ -43,16 +44,35 @@
   backBtn.delegate = self;
   backBtn.btnFiredSelector = @selector(back:);
   [self.view addSubview:backBtn.view];
-  backBtn.view.frame = CGRectMake(415, 0, 44, 44);
+  backBtn.view.frame = CGRectMake(self.view.frame.size.width-67, 10, 44, 44);
   
-    CALayer *onLayer = whammyOnBtn.layer;
-    onLayer.borderColor = [UIColor redColor].CGColor;
-    onLayer.borderWidth = 2;
-    onLayer.cornerRadius = 8;
-    CALayer *offLayer = whammyOffBtn.layer;
-    offLayer.borderColor = [UIColor redColor].CGColor;
-    offLayer.borderWidth = 2;
-    offLayer.cornerRadius = 8;
+  CALayer *collLayer = collectionView.layer;
+  collLayer.shadowColor = [UIColor blackColor].CGColor;
+  collLayer.shadowOffset = CGSizeZero;
+  collLayer.shadowRadius = 3.0f;
+  collLayer.shadowOpacity = 0.8f;
+  
+  whammyOnBtn.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.8];
+  whammyOffBtn.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.8];
+  
+  CALayer *onLayer = whammyOnBtn.layer;
+  onLayer.borderColor = kBaseColor.CGColor;
+  onLayer.borderWidth = 2;
+  onLayer.masksToBounds = NO;
+  onLayer.cornerRadius = 8;
+  onLayer.shadowColor = [UIColor blackColor].CGColor;
+  onLayer.shadowOffset = CGSizeZero;
+  onLayer.shadowRadius = 3.0f;
+  onLayer.shadowOpacity = 0.8f;
+  CALayer *offLayer = whammyOffBtn.layer;
+  offLayer.borderColor = kBaseColor.CGColor;
+  offLayer.borderWidth = 2;
+  offLayer.masksToBounds = NO;
+  offLayer.cornerRadius = 8;
+  offLayer.shadowColor = [UIColor blackColor].CGColor;
+  offLayer.shadowOffset = CGSizeZero;
+  offLayer.shadowRadius = 3.0f;
+  offLayer.shadowOpacity = 0.8f;  
 }
 
 - (void)viewDidUnload {
@@ -64,25 +84,40 @@
 }
 
 #pragma mark - UICollectionView Datasource
-- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
-    return 17;
+- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section
+{
+  switch (section)
+  {
+    case 0:
+      return 8;
+      break;
+    case 1:
+      return 9;
+      break;
+    default:
+      return 0;
+      break;
+  }
 }
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
-    return 1;
+    return 2;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    ProgrammCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.nameLbl.text = whammyProgramNames[17+indexPath.row];
-    return cell;
+- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+  ProgrammCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+  int offset = (indexPath.section == 0) ? 0 : 8;
+  cell.nameLbl.text = whammyProgramNames[17+offset+indexPath.row];
+  return cell;
 }
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)myCollectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [myCollectionView deselectItemAtIndexPath:indexPath animated:YES];
-    [WhammyMidi program:WhammyProgramBypassedDetuneShallow+indexPath.row];
+    int offset = (indexPath.section == 0) ? 0 : 8;
+    [WhammyMidi program:WhammyProgramBypassedDetuneShallow+offset+indexPath.row];
 }
 
 - (IBAction)pressedWhammyOn:(id)sender {

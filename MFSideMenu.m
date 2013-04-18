@@ -571,18 +571,21 @@ typedef enum {
     
     CGFloat navigationControllerXPosition = ABS([self pointAdjustedForInterfaceOrientation:self.rootViewController.view.frame.origin].x);
     CGFloat duration = [self animationDurationFromStartPosition:navigationControllerXPosition toEndPosition:0];
-    [UIView animateWithDuration:duration animations:^{
-        CGFloat xPosition = 0;
-        [self setRootControllerOffset:xPosition];
-    } completion:^(BOOL finished) {
-        // disable user interaction on the current stack of view controllers if the menu is visible
-        for(UIViewController* viewController in self.navigationController.viewControllers) {
-            viewController.view.userInteractionEnabled = (self.menuState == MFSideMenuStateClosed);
-        }
-        
-        // notify that the menu state event is done
-        [self sendMenuStateEventNotification:MFSideMenuStateEventMenuDidClose];
-    }];
+  
+  [UIView animateWithDuration:duration delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+    CGFloat xPosition = 0;
+    [self setRootControllerOffset:xPosition];
+  }
+                   completion:^(BOOL finished) {
+    // disable user interaction on the current stack of view controllers if the menu is visible
+    for(UIViewController* viewController in self.navigationController.viewControllers) {
+      viewController.view.userInteractionEnabled = (self.menuState == MFSideMenuStateClosed);
+    }
+    
+    // notify that the menu state event is done
+    [self sendMenuStateEventNotification:MFSideMenuStateEventMenuDidClose];
+
+  }];
 }
 
 - (void) sendMenuStateEventNotification:(MFSideMenuStateEvent)event {

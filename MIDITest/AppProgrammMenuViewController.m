@@ -4,19 +4,21 @@
 //
 //  Created by Michael Frederick on 3/19/12.
 
-#import "SideMenuViewController.h"
+#import "AppProgrammMenuViewController.h"
 #import "MFSideMenu.h"
 #import "AutoSnapViewController.h"
 #import "ModeViewController.h"
 #import "HoldPedalViewController.h"
 
-@implementation SideMenuViewController
+@implementation AppProgrammMenuViewController
 
 @synthesize sideMenu;
 
 - (void) viewDidLoad
 {
   [super viewDidLoad];
+  self.view.backgroundColor = [UIColor colorWithWhite:0.2 alpha:1.0];
+  self.tableView.separatorColor = kBaseColor;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -27,12 +29,17 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+  return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+  return 3;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  return 80;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -40,8 +47,15 @@
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+      cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+      cell.textLabel.textColor = kBaseColor;
+      cell.selectionStyle = UITableViewCellSelectionStyleGray;
+      
+      UIView *backgroundView = [[UIView alloc] initWithFrame:cell.bounds];
+      backgroundView.backgroundColor = [UIColor colorWithWhite:0.3 alpha:1.0];
+      cell.selectedBackgroundView = backgroundView;
     }
   
   NSString *cellTitle = @"";
@@ -49,7 +63,7 @@
   switch (indexPath.row)
   {
     case 0:
-      cellTitle = @"Modes";
+      cellTitle = @"Program";
       break;
     case 1:
       cellTitle = @"Autosnap";

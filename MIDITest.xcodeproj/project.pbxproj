@@ -15,21 +15,23 @@
 		14B9EA6B16C114C900069E74 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B9EA6A16C114C900069E74 /* CoreMIDI.framework */; };
 		14B9EA6F16C115AC00069E74 /* ModeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6D16C115AC00069E74 /* ModeViewController.mm */; };
 		14B9EA7016C115AC00069E74 /* ModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B9EA6E16C115AC00069E74 /* ModeViewController.xib */; };
+		14CCEDB61720137900E4C0C7 /* FavModeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CCEDB51720137900E4C0C7 /* FavModeCollectionViewController.m */; };
+		14ED941717043D0B005C507F /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 14ED941517043D0B005C507F /* bg.png */; };
+		14ED941817043D0B005C507F /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14ED941617043D0B005C507F /* bg@2x.png */; };
+		14ED941F170488B9005C507F /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 14ED941D170488B9005C507F /* settings.png */; };
 		14F6BD081703039A0041CB34 /* DelayedButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD061703039A0041CB34 /* DelayedButtonViewController.m */; };
 		14F6BD091703039A0041CB34 /* DelayedButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F6BD071703039A0041CB34 /* DelayedButtonViewController.xib */; };
 		14F6BD0B17032C7E0041CB34 /* MTInfoPanel.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 14F6BD0A17032C7E0041CB34 /* MTInfoPanel.bundle */; };
 		14F6BD0E17032C870041CB34 /* MTInfoPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD0D17032C870041CB34 /* MTInfoPanel.m */; };
 		14F6BD151703339F0041CB34 /* MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD121703339F0041CB34 /* MFSideMenu.m */; };
 		14F6BD161703339F0041CB34 /* UINavigationController+MFSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD141703339F0041CB34 /* UINavigationController+MFSideMenu.m */; };
-		14F6BD1A170333F20041CB34 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD19170333F20041CB34 /* SideMenuViewController.m */; };
+		14F6BD1A170333F20041CB34 /* AppProgrammMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD19170333F20041CB34 /* AppProgrammMenuViewController.m */; };
 		14F6BD1D17033FCD0041CB34 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F6BD1B17033FCD0041CB34 /* menu-icon.png */; };
 		14F6BD1E17033FCD0041CB34 /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14F6BD1C17033FCD0041CB34 /* menu-icon@2x.png */; };
 		19047E8316C4FD0500D5C570 /* WhammyMidi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19047E8216C4FD0500D5C570 /* WhammyMidi.mm */; };
 		197A4F9316D540D90096A787 /* ProgrammCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 197A4F9216D540D90096A787 /* ProgrammCell.m */; };
 		197A4F9516D545220096A787 /* ProgrammCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197A4F9416D545210096A787 /* ProgrammCell.xib */; };
 		197A4F9716D54A010096A787 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197A4F9616D54A010096A787 /* QuartzCore.framework */; };
-		197A4F9A16D570BB0096A787 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 197A4F9816D570BA0096A787 /* back.png */; };
-		197A4F9B16D570BB0096A787 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 197A4F9916D570BB0096A787 /* back@2x.png */; };
 		197A4F9F16D572670096A787 /* WhammyControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 197A4F9E16D572670096A787 /* WhammyControlViewController.m */; };
 		197A4FA316D5787D0096A787 /* AutoSnapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 197A4FA116D5787D0096A787 /* AutoSnapViewController.m */; };
 		197A4FA416D5787D0096A787 /* AutoSnapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 197A4FA216D5787D0096A787 /* AutoSnapViewController.xib */; };
@@ -64,6 +66,11 @@
 		14B9EA6D16C115AC00069E74 /* ModeViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ModeViewController.mm; sourceTree = "<group>"; };
 		14B9EA6E16C115AC00069E74 /* ModeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModeViewController.xib; sourceTree = "<group>"; };
 		14B9EA7116C1304800069E74 /* WhammyMidi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WhammyMidi.h; path = ../PGMidi/WhammyMidi.h; sourceTree = "<group>"; };
+		14CCEDB41720137900E4C0C7 /* FavModeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavModeCollectionViewController.h; sourceTree = "<group>"; };
+		14CCEDB51720137900E4C0C7 /* FavModeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavModeCollectionViewController.m; sourceTree = "<group>"; };
+		14ED941517043D0B005C507F /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		14ED941617043D0B005C507F /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
+		14ED941D170488B9005C507F /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		14F6BD051703039A0041CB34 /* DelayedButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelayedButtonViewController.h; sourceTree = "<group>"; };
 		14F6BD061703039A0041CB34 /* DelayedButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelayedButtonViewController.m; sourceTree = "<group>"; };
 		14F6BD071703039A0041CB34 /* DelayedButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DelayedButtonViewController.xib; sourceTree = "<group>"; };
@@ -74,8 +81,8 @@
 		14F6BD121703339F0041CB34 /* MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenu.m; sourceTree = "<group>"; };
 		14F6BD131703339F0041CB34 /* UINavigationController+MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MFSideMenu.h"; sourceTree = "<group>"; };
 		14F6BD141703339F0041CB34 /* UINavigationController+MFSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MFSideMenu.m"; sourceTree = "<group>"; };
-		14F6BD18170333F20041CB34 /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
-		14F6BD19170333F20041CB34 /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
+		14F6BD18170333F20041CB34 /* AppProgrammMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppProgrammMenuViewController.h; sourceTree = "<group>"; };
+		14F6BD19170333F20041CB34 /* AppProgrammMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppProgrammMenuViewController.m; sourceTree = "<group>"; };
 		14F6BD1B17033FCD0041CB34 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 		14F6BD1C17033FCD0041CB34 /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
 		19047E8216C4FD0500D5C570 /* WhammyMidi.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WhammyMidi.mm; sourceTree = "<group>"; };
@@ -83,8 +90,6 @@
 		197A4F9216D540D90096A787 /* ProgrammCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgrammCell.m; sourceTree = "<group>"; };
 		197A4F9416D545210096A787 /* ProgrammCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgrammCell.xib; sourceTree = "<group>"; };
 		197A4F9616D54A010096A787 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		197A4F9816D570BA0096A787 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		197A4F9916D570BB0096A787 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		197A4F9D16D572670096A787 /* WhammyControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhammyControlViewController.h; sourceTree = "<group>"; };
 		197A4F9E16D572670096A787 /* WhammyControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhammyControlViewController.m; sourceTree = "<group>"; };
 		197A4FA016D5787C0096A787 /* AutoSnapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSnapViewController.h; sourceTree = "<group>"; };
@@ -127,8 +132,9 @@
 		1437EC9716D63ED700CFFA17 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				197A4F9816D570BA0096A787 /* back.png */,
-				197A4F9916D570BB0096A787 /* back@2x.png */,
+				14ED941D170488B9005C507F /* settings.png */,
+				14ED941517043D0B005C507F /* bg.png */,
+				14ED941617043D0B005C507F /* bg@2x.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -235,8 +241,10 @@
 				14F6BD051703039A0041CB34 /* DelayedButtonViewController.h */,
 				14F6BD061703039A0041CB34 /* DelayedButtonViewController.m */,
 				14F6BD071703039A0041CB34 /* DelayedButtonViewController.xib */,
-				14F6BD18170333F20041CB34 /* SideMenuViewController.h */,
-				14F6BD19170333F20041CB34 /* SideMenuViewController.m */,
+				14F6BD18170333F20041CB34 /* AppProgrammMenuViewController.h */,
+				14F6BD19170333F20041CB34 /* AppProgrammMenuViewController.m */,
+				14CCEDB41720137900E4C0C7 /* FavModeCollectionViewController.h */,
+				14CCEDB51720137900E4C0C7 /* FavModeCollectionViewController.m */,
 				19FA37D316D6812900A5ED34 /* MenuViewController.h */,
 				19FA37D416D6812900A5ED34 /* MenuViewController.m */,
 				19FA37D516D6812900A5ED34 /* MenuViewController.xib */,
@@ -335,8 +343,6 @@
 				199CAB9016C0EE0D00575395 /* Default-568h@2x.png in Resources */,
 				14B9EA7016C115AC00069E74 /* ModeViewController.xib in Resources */,
 				197A4F9516D545220096A787 /* ProgrammCell.xib in Resources */,
-				197A4F9A16D570BB0096A787 /* back.png in Resources */,
-				197A4F9B16D570BB0096A787 /* back@2x.png in Resources */,
 				197A4FA416D5787D0096A787 /* AutoSnapViewController.xib in Resources */,
 				1437EC9C16D6402E00CFFA17 /* HoldPedalViewController.xib in Resources */,
 				19FA37D716D6812900A5ED34 /* MenuViewController.xib in Resources */,
@@ -344,6 +350,9 @@
 				14F6BD0B17032C7E0041CB34 /* MTInfoPanel.bundle in Resources */,
 				14F6BD1D17033FCD0041CB34 /* menu-icon.png in Resources */,
 				14F6BD1E17033FCD0041CB34 /* menu-icon@2x.png in Resources */,
+				14ED941717043D0B005C507F /* bg.png in Resources */,
+				14ED941817043D0B005C507F /* bg@2x.png in Resources */,
+				14ED941F170488B9005C507F /* settings.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +379,8 @@
 				14F6BD0E17032C870041CB34 /* MTInfoPanel.m in Sources */,
 				14F6BD151703339F0041CB34 /* MFSideMenu.m in Sources */,
 				14F6BD161703339F0041CB34 /* UINavigationController+MFSideMenu.m in Sources */,
-				14F6BD1A170333F20041CB34 /* SideMenuViewController.m in Sources */,
+				14F6BD1A170333F20041CB34 /* AppProgrammMenuViewController.m in Sources */,
+				14CCEDB61720137900E4C0C7 /* FavModeCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

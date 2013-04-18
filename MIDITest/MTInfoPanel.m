@@ -115,8 +115,8 @@
             
             
         case MTInfoPanelTypeWarning: {
-            startColor = MT_RGBA(253, 178, 77, 1.0);
-            endColor = MT_RGBA(196, 123, 20, 1.0);
+            startColor = MT_RGBA(35, 35, 35, 1.0);
+            endColor = MT_RGBA(28, 28, 28, 1.0);
             detailColor = MT_RGBA(97, 61, 24, 1.0000);
             
             if (image == nil) {

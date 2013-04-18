@@ -26,7 +26,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-      self.delay = 1.0f;
+      self.delay = 0.7f;
     }
     return self;
 }
@@ -35,10 +35,11 @@
 {
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
+  self.view.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
   imageView.image = self.image;
   textLbl.text = self.text;
   CALayer *layer = self.view.layer;
-  layer.borderColor = [UIColor redColor].CGColor;
+  layer.borderColor = kBaseColor.CGColor;
   layer.borderWidth = 0;
   layer.cornerRadius = 8;
 }
@@ -77,7 +78,7 @@
   delayTimer = [NSTimer scheduledTimerWithTimeInterval:self.delay target:self selector:@selector(fire) userInfo:nil repeats:NO];
   
   CALayer *layer = self.view.layer;
-  layer.backgroundColor = [UIColor colorWithRed:255 green:0 blue:0 alpha:0.5].CGColor;
+  layer.backgroundColor = kHighlightColor.CGColor;
   layer.borderWidth = 2;
 }
 

@@ -12,13 +12,25 @@
 
 #import "MenuViewController.h"
 
+typedef enum  {
+  TouchUpModeOff,
+  TouchUpModeMin,
+  TouchUpModeMiddle,
+  TouchUpModeMax
+} TouchUpMode;
+
 @interface AutoSnapViewController ()
 {
-    IBOutlet UIView *snapper;
+  IBOutlet UISegmentedControl *touchUpModeControl;
+  IBOutlet UIView *snapper;
+  IBOutlet UIView *settingsView;
+  IBOutlet UILabel *touchModeLbl;
     
-    float autoSnapPoint;
-    BOOL whammyOffOnTouchUp;
+  float autoSnapPoint;
+  BOOL whammyOffOnTouchUp;
 }
+
+-(IBAction)touchOffModeChanged:(id)sender;
 
 @end
 
@@ -37,14 +49,30 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    autoSnapPoint = 0.5;
-    [self setWhammyOffOnTouchUp:YES];
+  
+  DelayedButtonViewController *settingsBtn = [[DelayedButtonViewController alloc] initWithNibName:@"DelayedButtonViewController" bundle:nil];
+  [self addChildViewController:settingsBtn];
+  settingsBtn.delay = 0.5;
+  settingsBtn.image = [UIImage imageNamed:@"settings"];
+  settingsBtn.text = nil;
+  settingsBtn.delegate = self;
+  settingsBtn.btnFiredSelector = @selector(showSettings);
+  [self.view addSubview:settingsBtn.view];
+  settingsBtn.view.frame = CGRectMake(self.view.frame.size.width-47, 60, 44, 44);
+
+  settingsView.layer.borderColor = kBaseColor.CGColor;
+  settingsView.layer.borderWidth = 1;
+  settingsView.layer.cornerRadius = 8;
+  settingsView.layer.masksToBounds = YES;
+  
 }
 
--(void)didReceiveMemoryWarning
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super viewWillAppear:animated];
+  [touchUpModeControl setSelectedSegmentIndex:[[NSUserDefaults standardUserDefaults] integerForKey:@"TouchUpMode"]];
+  
+  [self touchOffModeChanged:touchUpModeControl];
 }
 
 -(void)updateUIForTouchPosition:(float)position
@@ -68,7 +96,9 @@
     CGRect snapperFrame = snapper.frame;
     snapperFrame.origin.x = -10.0f;
     snapperFrame.size.width = 1.0f;
-    snapper.frame = snapperFrame;
+    [UIView animateWithDuration:0.1f animations:^{
+          snapper.frame = snapperFrame;
+    }];
 }
 
 #pragma settings
@@ -86,9 +116,72 @@
   }
 }
 
+-(void)showSettings
+{
+  if (!([settingsView isDescendantOfView:self.view]))
+  {
+    settingsView.center = xyPad.superview.center;
+    settingsView.frame = CGRectOffset(settingsView.frame, 0, -settingsView.frame.origin.y-settingsView.frame.size.height);
+    [self.view addSubview:settingsView];
+    [UIView animateWithDuration:0.3f animations:^{
+      settingsView.center = xyPad.superview.center;
+    }];
+  }
+  else
+  {
+    [UIView animateWithDuration:0.3f
+                     animations:^{
+                       settingsView.frame = CGRectOffset(settingsView.frame, 0, -settingsView.frame.origin.y-settingsView.frame.size.height);
+                     } completion:^(BOOL finished) {
+                           [settingsView removeFromSuperview];
+                     }];
+  }
+}
+
+-(void)touchOffModeChanged:(UISegmentedControl*)sender
+{
+  switch (sender.selectedSegmentIndex)
+  {
+    case TouchUpModeOff: {
+      [self setWhammyOffOnTouchUp:YES];
+      touchModeLbl.text = @"Mode: Off";
+      break;
+    }
+    case TouchUpModeMin: {
+      autoSnapPoint = 0.0;
+      [self setWhammyOffOnTouchUp:NO];
+      touchModeLbl.text = @"Mode: Min";
+      break;
+    }
+    case TouchUpModeMiddle: {
+      autoSnapPoint = 0.5;
+      [self setWhammyOffOnTouchUp:NO];
+      touchModeLbl.text = @"Mode: Half";
+      break;
+    }
+    case TouchUpModeMax: {
+      autoSnapPoint = 1.0;
+      [self setWhammyOffOnTouchUp:NO];
+      touchModeLbl.text = @"Mode: Max";
+      break;
+    }
+    default:
+      [self setWhammyOffOnTouchUp:YES];
+      break;
+  }
+  [[NSUserDefaults standardUserDefaults] setInteger:sender.selectedSegmentIndex forKey:@"TouchUpMode"];
+  [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 #pragma singleTouch
 -(void)singleFingerTouch:(UITouch*)touch
 {
+  if ([settingsView isDescendantOfView:self.view])
+  {
+    [self showSettings];
+    return;
+  }
+  
   [super singleFingerTouch:touch];
   [WhammyMidi whammyOn];
   [self touchPositionToPedal:touch];
