@@ -82,7 +82,26 @@
   layer.borderWidth = 2;
 }
 
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  [touches enumerateObjectsUsingBlock:^(UITouch* obj, BOOL *stop) {
+    if (!CGRectContainsPoint(self.view.bounds, [obj locationInView:self.view])) {
+      [self touchesCancelled:touches withEvent:event];
+    }
+  }];
+}
+
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  [self endTouch];
+}
+
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+  [self endTouch];
+}
+
+-(void)endTouch
 {
   [delayTimer invalidate];
   delayTimer = nil;
