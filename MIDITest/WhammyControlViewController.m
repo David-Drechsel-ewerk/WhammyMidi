@@ -84,7 +84,7 @@
   
   DelayedButtonViewController *quickModeBtn = [[DelayedButtonViewController alloc] initWithNibName:@"DelayedButtonViewController" bundle:nil];
   [self addChildViewController:quickModeBtn];
-  quickModeBtn.image = [UIImage imageNamed:@"menu-icon"];
+  quickModeBtn.image = [UIImage imageNamed:@"fav"];
   quickModeBtn.delegate = self;
   quickModeBtn.btnFiredSelector = @selector(quickModeBtnPressed:);
   [self.view addSubview:quickModeBtn.view];

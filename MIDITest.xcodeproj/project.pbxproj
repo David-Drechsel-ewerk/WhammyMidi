@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1437EC9B16D6402E00CFFA17 /* HoldPedalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437EC9916D6402E00CFFA17 /* HoldPedalViewController.m */; };
 		1437EC9C16D6402E00CFFA17 /* HoldPedalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */; };
+		14988A3817254C7A00415449 /* fav.png in Resources */ = {isa = PBXBuildFile; fileRef = 14988A3717254C7A00415449 /* fav.png */; };
 		14B9EA6516C112E600069E74 /* PGMidi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6016C112E600069E74 /* PGMidi.mm */; };
 		14B9EA6616C112E600069E74 /* PGMidiAllSources.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6216C112E600069E74 /* PGMidiAllSources.mm */; };
 		14B9EA6716C112E600069E74 /* PGMidiFind.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6416C112E600069E74 /* PGMidiFind.mm */; };
@@ -52,6 +53,7 @@
 		1437EC9816D6402E00CFFA17 /* HoldPedalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldPedalViewController.h; sourceTree = "<group>"; };
 		1437EC9916D6402E00CFFA17 /* HoldPedalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoldPedalViewController.m; sourceTree = "<group>"; };
 		1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HoldPedalViewController.xib; sourceTree = "<group>"; };
+		14988A3717254C7A00415449 /* fav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fav.png; sourceTree = "<group>"; };
 		14B9EA5D16C112E600069E74 /* iOSVersionDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSVersionDetection.h; sourceTree = "<group>"; };
 		14B9EA5E16C112E600069E74 /* PGArc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGArc.h; sourceTree = "<group>"; };
 		14B9EA5F16C112E600069E74 /* PGMidi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMidi.h; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				14ED941D170488B9005C507F /* settings.png */,
+				14988A3717254C7A00415449 /* fav.png */,
 				14ED941517043D0B005C507F /* bg.png */,
 				14ED941617043D0B005C507F /* bg@2x.png */,
 			);
@@ -353,6 +356,7 @@
 				14ED941717043D0B005C507F /* bg.png in Resources */,
 				14ED941817043D0B005C507F /* bg@2x.png in Resources */,
 				14ED941F170488B9005C507F /* settings.png in Resources */,
+				14988A3817254C7A00415449 /* fav.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
