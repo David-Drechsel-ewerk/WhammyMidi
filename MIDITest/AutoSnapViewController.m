@@ -58,7 +58,7 @@ typedef enum  {
   settingsBtn.delegate = self;
   settingsBtn.btnFiredSelector = @selector(showSettings);
   [self.view addSubview:settingsBtn.view];
-  settingsBtn.view.frame = CGRectMake(self.view.frame.size.width-47, 60, 44, 44);
+  settingsBtn.view.frame = CGRectMake(self.view.frame.size.width-47, 80, 44, 44);
 
   settingsView.layer.borderColor = kBaseColor.CGColor;
   settingsView.layer.borderWidth = 1;

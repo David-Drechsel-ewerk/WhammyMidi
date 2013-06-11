@@ -44,7 +44,7 @@
   backBtn.delegate = self;
   backBtn.btnFiredSelector = @selector(back:);
   [self.view addSubview:backBtn.view];
-  backBtn.view.frame = CGRectMake(self.view.frame.size.width-67, 10, 44, 44);
+  backBtn.view.frame = CGRectMake(self.view.frame.size.width-67, 30, 44, 44);
   
 //  CALayer *collLayer = collectionView.layer;
 //  collLayer.shadowColor = [UIColor blackColor].CGColor;

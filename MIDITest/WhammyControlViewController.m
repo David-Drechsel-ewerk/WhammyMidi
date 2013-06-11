@@ -80,7 +80,7 @@
   backBtn.delegate = self;
   backBtn.btnFiredSelector = @selector(back:);
   [self.view addSubview:backBtn.view];
-  backBtn.view.frame = CGRectMake(self.view.frame.size.width-47, 10, 44, 44);
+  backBtn.view.frame = CGRectMake(self.view.frame.size.width-47, 30, 44, 44);
   
   DelayedButtonViewController *quickModeBtn = [[DelayedButtonViewController alloc] initWithNibName:@"DelayedButtonViewController" bundle:nil];
   [self addChildViewController:quickModeBtn];
@@ -88,7 +88,7 @@
   quickModeBtn.delegate = self;
   quickModeBtn.btnFiredSelector = @selector(quickModeBtnPressed:);
   [self.view addSubview:quickModeBtn.view];
-  quickModeBtn.view.frame = CGRectMake(3, 10, 44, 44);
+  quickModeBtn.view.frame = CGRectMake(3, 30, 44, 44);
 
   xyPad.backgroundColor = [UIColor colorWithWhite:0.1f alpha:0.3f];
   CALayer *layer = xyPad.layer;
