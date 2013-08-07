@@ -52,6 +52,7 @@
       cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
       cell.textLabel.textColor = kBaseColor;
       cell.selectionStyle = UITableViewCellSelectionStyleGray;
+      cell.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.1];
       
       UIView *backgroundView = [[UIView alloc] initWithFrame:cell.bounds];
       backgroundView.backgroundColor = [UIColor colorWithWhite:0.3 alpha:1.0];

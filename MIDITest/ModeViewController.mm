@@ -73,7 +73,9 @@
   offLayer.shadowColor = [UIColor blackColor].CGColor;
   offLayer.shadowOffset = CGSizeZero;
   offLayer.shadowRadius = 3.0f;
-  offLayer.shadowOpacity = 0.8f;  
+  offLayer.shadowOpacity = 0.8f;
+  
+  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_tile"]];
 }
 
 - (void)viewDidUnload {

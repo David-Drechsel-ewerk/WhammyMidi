@@ -11,6 +11,8 @@
 		1437EC9C16D6402E00CFFA17 /* HoldPedalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */; };
 		143FAA0A17B241DF00539A79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143FAA0917B241DF00539A79 /* Images.xcassets */; };
 		14988A3817254C7A00415449 /* fav.png in Resources */ = {isa = PBXBuildFile; fileRef = 14988A3717254C7A00415449 /* fav.png */; };
+		14A2979217B2474E00C28115 /* bg_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A2979017B2474E00C28115 /* bg_tile.png */; };
+		14A2979317B2474E00C28115 /* bg_tile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14A2979117B2474E00C28115 /* bg_tile@2x.png */; };
 		14B9EA6516C112E600069E74 /* PGMidi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6016C112E600069E74 /* PGMidi.mm */; };
 		14B9EA6616C112E600069E74 /* PGMidiAllSources.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6216C112E600069E74 /* PGMidiAllSources.mm */; };
 		14B9EA6716C112E600069E74 /* PGMidiFind.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6416C112E600069E74 /* PGMidiFind.mm */; };
@@ -18,8 +20,6 @@
 		14B9EA6F16C115AC00069E74 /* ModeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6D16C115AC00069E74 /* ModeViewController.mm */; };
 		14B9EA7016C115AC00069E74 /* ModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14B9EA6E16C115AC00069E74 /* ModeViewController.xib */; };
 		14CCEDB61720137900E4C0C7 /* FavModeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CCEDB51720137900E4C0C7 /* FavModeCollectionViewController.m */; };
-		14ED941717043D0B005C507F /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 14ED941517043D0B005C507F /* bg.png */; };
-		14ED941817043D0B005C507F /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14ED941617043D0B005C507F /* bg@2x.png */; };
 		14ED941F170488B9005C507F /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 14ED941D170488B9005C507F /* settings.png */; };
 		14F6BD081703039A0041CB34 /* DelayedButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6BD061703039A0041CB34 /* DelayedButtonViewController.m */; };
 		14F6BD091703039A0041CB34 /* DelayedButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F6BD071703039A0041CB34 /* DelayedButtonViewController.xib */; };
@@ -56,6 +56,8 @@
 		1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HoldPedalViewController.xib; sourceTree = "<group>"; };
 		143FAA0917B241DF00539A79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		14988A3717254C7A00415449 /* fav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fav.png; sourceTree = "<group>"; };
+		14A2979017B2474E00C28115 /* bg_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_tile.png; sourceTree = "<group>"; };
+		14A2979117B2474E00C28115 /* bg_tile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_tile@2x.png"; sourceTree = "<group>"; };
 		14B9EA5D16C112E600069E74 /* iOSVersionDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSVersionDetection.h; sourceTree = "<group>"; };
 		14B9EA5E16C112E600069E74 /* PGArc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGArc.h; sourceTree = "<group>"; };
 		14B9EA5F16C112E600069E74 /* PGMidi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMidi.h; sourceTree = "<group>"; };
@@ -72,8 +74,6 @@
 		14B9EA7116C1304800069E74 /* WhammyMidi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WhammyMidi.h; path = ../PGMidi/WhammyMidi.h; sourceTree = "<group>"; };
 		14CCEDB41720137900E4C0C7 /* FavModeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavModeCollectionViewController.h; sourceTree = "<group>"; };
 		14CCEDB51720137900E4C0C7 /* FavModeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavModeCollectionViewController.m; sourceTree = "<group>"; };
-		14ED941517043D0B005C507F /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		14ED941617043D0B005C507F /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
 		14ED941D170488B9005C507F /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		14F6BD051703039A0041CB34 /* DelayedButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelayedButtonViewController.h; sourceTree = "<group>"; };
 		14F6BD061703039A0041CB34 /* DelayedButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelayedButtonViewController.m; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		197A4FA016D5787C0096A787 /* AutoSnapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSnapViewController.h; sourceTree = "<group>"; };
 		197A4FA116D5787D0096A787 /* AutoSnapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSnapViewController.m; sourceTree = "<group>"; };
 		197A4FA216D5787D0096A787 /* AutoSnapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoSnapViewController.xib; sourceTree = "<group>"; };
-		199CAB7616C0EE0D00575395 /* MIDITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIDITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		199CAB7616C0EE0D00575395 /* MIDITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MIDITest.app; path = Whammy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199CAB7916C0EE0D00575395 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		199CAB7B16C0EE0D00575395 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		199CAB7D16C0EE0D00575395 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,10 +136,10 @@
 		1437EC9716D63ED700CFFA17 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				14A2979017B2474E00C28115 /* bg_tile.png */,
+				14A2979117B2474E00C28115 /* bg_tile@2x.png */,
 				14ED941D170488B9005C507F /* settings.png */,
 				14988A3717254C7A00415449 /* fav.png */,
-				14ED941517043D0B005C507F /* bg.png */,
-				14ED941617043D0B005C507F /* bg@2x.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -345,20 +345,20 @@
 			files = (
 				199CAB8416C0EE0D00575395 /* InfoPlist.strings in Resources */,
 				199CAB8C16C0EE0D00575395 /* Default.png in Resources */,
+				14A2979217B2474E00C28115 /* bg_tile.png in Resources */,
 				199CAB8E16C0EE0D00575395 /* Default@2x.png in Resources */,
 				199CAB9016C0EE0D00575395 /* Default-568h@2x.png in Resources */,
 				14B9EA7016C115AC00069E74 /* ModeViewController.xib in Resources */,
 				197A4F9516D545220096A787 /* ProgrammCell.xib in Resources */,
 				197A4FA416D5787D0096A787 /* AutoSnapViewController.xib in Resources */,
 				1437EC9C16D6402E00CFFA17 /* HoldPedalViewController.xib in Resources */,
+				14A2979317B2474E00C28115 /* bg_tile@2x.png in Resources */,
 				19FA37D716D6812900A5ED34 /* MenuViewController.xib in Resources */,
 				143FAA0A17B241DF00539A79 /* Images.xcassets in Resources */,
 				14F6BD091703039A0041CB34 /* DelayedButtonViewController.xib in Resources */,
 				14F6BD0B17032C7E0041CB34 /* MTInfoPanel.bundle in Resources */,
 				14F6BD1D17033FCD0041CB34 /* menu-icon.png in Resources */,
 				14F6BD1E17033FCD0041CB34 /* menu-icon@2x.png in Resources */,
-				14ED941717043D0B005C507F /* bg.png in Resources */,
-				14ED941817043D0B005C507F /* bg@2x.png in Resources */,
 				14ED941F170488B9005C507F /* settings.png in Resources */,
 				14988A3817254C7A00415449 /* fav.png in Resources */,
 			);

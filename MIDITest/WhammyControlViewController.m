@@ -104,6 +104,8 @@
   superlayer.shadowOffset = CGSizeZero;
   superlayer.shadowRadius = 3.0f;
   superlayer.shadowOpacity = 0.8f;
+  
+  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_tile"]];
 }
 
 -(void)volumeChanged:(NSNotification*)notification
