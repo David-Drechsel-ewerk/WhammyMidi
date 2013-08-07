@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1437EC9B16D6402E00CFFA17 /* HoldPedalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437EC9916D6402E00CFFA17 /* HoldPedalViewController.m */; };
 		1437EC9C16D6402E00CFFA17 /* HoldPedalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */; };
+		143FAA0A17B241DF00539A79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143FAA0917B241DF00539A79 /* Images.xcassets */; };
 		14988A3817254C7A00415449 /* fav.png in Resources */ = {isa = PBXBuildFile; fileRef = 14988A3717254C7A00415449 /* fav.png */; };
 		14B9EA6516C112E600069E74 /* PGMidi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6016C112E600069E74 /* PGMidi.mm */; };
 		14B9EA6616C112E600069E74 /* PGMidiAllSources.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14B9EA6216C112E600069E74 /* PGMidiAllSources.mm */; };
@@ -53,6 +54,7 @@
 		1437EC9816D6402E00CFFA17 /* HoldPedalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldPedalViewController.h; sourceTree = "<group>"; };
 		1437EC9916D6402E00CFFA17 /* HoldPedalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoldPedalViewController.m; sourceTree = "<group>"; };
 		1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HoldPedalViewController.xib; sourceTree = "<group>"; };
+		143FAA0917B241DF00539A79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		14988A3717254C7A00415449 /* fav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fav.png; sourceTree = "<group>"; };
 		14B9EA5D16C112E600069E74 /* iOSVersionDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSVersionDetection.h; sourceTree = "<group>"; };
 		14B9EA5E16C112E600069E74 /* PGArc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGArc.h; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				199CAB8016C0EE0D00575395 /* Supporting Files */,
 				14B9EA7116C1304800069E74 /* WhammyMidi.h */,
 				19047E8216C4FD0500D5C570 /* WhammyMidi.mm */,
+				143FAA0917B241DF00539A79 /* Images.xcassets */,
 			);
 			path = MIDITest;
 			sourceTree = "<group>";
@@ -292,9 +295,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		199CAB7516C0EE0D00575395 /* MIDITest */ = {
+		199CAB7516C0EE0D00575395 /* Whammy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 199CAB9316C0EE0D00575395 /* Build configuration list for PBXNativeTarget "MIDITest" */;
+			buildConfigurationList = 199CAB9316C0EE0D00575395 /* Build configuration list for PBXNativeTarget "Whammy" */;
 			buildPhases = (
 				199CAB7216C0EE0D00575395 /* Sources */,
 				199CAB7316C0EE0D00575395 /* Frameworks */,
@@ -304,7 +307,7 @@
 			);
 			dependencies = (
 			);
-			name = MIDITest;
+			name = Whammy;
 			productName = MIDITest;
 			productReference = 199CAB7616C0EE0D00575395 /* MIDITest.app */;
 			productType = "com.apple.product-type.application";
@@ -330,7 +333,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				199CAB7516C0EE0D00575395 /* MIDITest */,
+				199CAB7516C0EE0D00575395 /* Whammy */,
 			);
 		};
 /* End PBXProject section */
@@ -349,6 +352,7 @@
 				197A4FA416D5787D0096A787 /* AutoSnapViewController.xib in Resources */,
 				1437EC9C16D6402E00CFFA17 /* HoldPedalViewController.xib in Resources */,
 				19FA37D716D6812900A5ED34 /* MenuViewController.xib in Resources */,
+				143FAA0A17B241DF00539A79 /* Images.xcassets in Resources */,
 				14F6BD091703039A0041CB34 /* DelayedButtonViewController.xib in Resources */,
 				14F6BD0B17032C7E0041CB34 /* MTInfoPanel.bundle in Resources */,
 				14F6BD1D17033FCD0041CB34 /* menu-icon.png in Resources */,
@@ -461,6 +465,8 @@
 		199CAB9416C0EE0D00575395 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
@@ -481,6 +487,8 @@
 		199CAB9516C0EE0D00575395 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
@@ -510,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		199CAB9316C0EE0D00575395 /* Build configuration list for PBXNativeTarget "MIDITest" */ = {
+		199CAB9316C0EE0D00575395 /* Build configuration list for PBXNativeTarget "Whammy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				199CAB9416C0EE0D00575395 /* Debug */,

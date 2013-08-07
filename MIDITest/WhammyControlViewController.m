@@ -106,6 +106,11 @@
   superlayer.shadowOpacity = 0.8f;
 }
 
+-(void)volumeChanged:(NSNotification*)notification
+{
+  NSLog(@"%@", notification);
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
