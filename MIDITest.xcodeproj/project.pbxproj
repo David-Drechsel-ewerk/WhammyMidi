@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142DC49117B2509500774EA1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 142DC49017B2509500774EA1 /* Default@2x.png */; };
 		1437EC9B16D6402E00CFFA17 /* HoldPedalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1437EC9916D6402E00CFFA17 /* HoldPedalViewController.m */; };
 		1437EC9C16D6402E00CFFA17 /* HoldPedalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */; };
 		143FAA0A17B241DF00539A79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143FAA0917B241DF00539A79 /* Images.xcassets */; };
@@ -43,14 +44,12 @@
 		199CAB8416C0EE0D00575395 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 199CAB8216C0EE0D00575395 /* InfoPlist.strings */; };
 		199CAB8616C0EE0D00575395 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 199CAB8516C0EE0D00575395 /* main.m */; };
 		199CAB8A16C0EE0D00575395 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 199CAB8916C0EE0D00575395 /* AppDelegate.m */; };
-		199CAB8C16C0EE0D00575395 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 199CAB8B16C0EE0D00575395 /* Default.png */; };
-		199CAB8E16C0EE0D00575395 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 199CAB8D16C0EE0D00575395 /* Default@2x.png */; };
-		199CAB9016C0EE0D00575395 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 199CAB8F16C0EE0D00575395 /* Default-568h@2x.png */; };
 		19FA37D616D6812900A5ED34 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FA37D416D6812900A5ED34 /* MenuViewController.m */; };
 		19FA37D716D6812900A5ED34 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19FA37D516D6812900A5ED34 /* MenuViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142DC49017B2509500774EA1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1437EC9816D6402E00CFFA17 /* HoldPedalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoldPedalViewController.h; sourceTree = "<group>"; };
 		1437EC9916D6402E00CFFA17 /* HoldPedalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoldPedalViewController.m; sourceTree = "<group>"; };
 		1437EC9A16D6402E00CFFA17 /* HoldPedalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HoldPedalViewController.xib; sourceTree = "<group>"; };
@@ -99,7 +98,7 @@
 		197A4FA016D5787C0096A787 /* AutoSnapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoSnapViewController.h; sourceTree = "<group>"; };
 		197A4FA116D5787D0096A787 /* AutoSnapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoSnapViewController.m; sourceTree = "<group>"; };
 		197A4FA216D5787D0096A787 /* AutoSnapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoSnapViewController.xib; sourceTree = "<group>"; };
-		199CAB7616C0EE0D00575395 /* MIDITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MIDITest.app; path = Whammy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		199CAB7616C0EE0D00575395 /* Whammy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whammy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199CAB7916C0EE0D00575395 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		199CAB7B16C0EE0D00575395 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		199CAB7D16C0EE0D00575395 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -109,9 +108,6 @@
 		199CAB8716C0EE0D00575395 /* MIDITest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MIDITest-Prefix.pch"; sourceTree = "<group>"; };
 		199CAB8816C0EE0D00575395 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		199CAB8916C0EE0D00575395 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		199CAB8B16C0EE0D00575395 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		199CAB8D16C0EE0D00575395 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		199CAB8F16C0EE0D00575395 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		19FA37D316D6812900A5ED34 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		19FA37D416D6812900A5ED34 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		19FA37D516D6812900A5ED34 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -136,6 +132,7 @@
 		1437EC9716D63ED700CFFA17 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				142DC49017B2509500774EA1 /* Default@2x.png */,
 				14A2979017B2474E00C28115 /* bg_tile.png */,
 				14A2979117B2474E00C28115 /* bg_tile@2x.png */,
 				14ED941D170488B9005C507F /* settings.png */,
@@ -222,7 +219,7 @@
 		199CAB7716C0EE0D00575395 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				199CAB7616C0EE0D00575395 /* MIDITest.app */,
+				199CAB7616C0EE0D00575395 /* Whammy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -270,9 +267,6 @@
 				199CAB8216C0EE0D00575395 /* InfoPlist.strings */,
 				199CAB8516C0EE0D00575395 /* main.m */,
 				199CAB8716C0EE0D00575395 /* MIDITest-Prefix.pch */,
-				199CAB8B16C0EE0D00575395 /* Default.png */,
-				199CAB8D16C0EE0D00575395 /* Default@2x.png */,
-				199CAB8F16C0EE0D00575395 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -309,7 +303,7 @@
 			);
 			name = Whammy;
 			productName = MIDITest;
-			productReference = 199CAB7616C0EE0D00575395 /* MIDITest.app */;
+			productReference = 199CAB7616C0EE0D00575395 /* Whammy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -343,11 +337,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142DC49117B2509500774EA1 /* Default@2x.png in Resources */,
 				199CAB8416C0EE0D00575395 /* InfoPlist.strings in Resources */,
-				199CAB8C16C0EE0D00575395 /* Default.png in Resources */,
 				14A2979217B2474E00C28115 /* bg_tile.png in Resources */,
-				199CAB8E16C0EE0D00575395 /* Default@2x.png in Resources */,
-				199CAB9016C0EE0D00575395 /* Default-568h@2x.png in Resources */,
 				14B9EA7016C115AC00069E74 /* ModeViewController.xib in Resources */,
 				197A4F9516D545220096A787 /* ProgrammCell.xib in Resources */,
 				197A4FA416D5787D0096A787 /* AutoSnapViewController.xib in Resources */,
@@ -431,7 +423,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -455,7 +447,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -466,7 +458,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
@@ -478,7 +469,7 @@
 				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
 				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
 				INFOPLIST_FILE = "MIDITest/MIDITest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -488,7 +479,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
@@ -500,7 +490,7 @@
 				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
 				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
 				INFOPLIST_FILE = "MIDITest/MIDITest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
